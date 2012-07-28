@@ -1,0 +1,824 @@
+/*---------------------------------------------------------------------------
+	
+			General Styles
+
+-----------------------------------------------------------------------------*/
+* {
+	outline: none;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+body {
+	background: url("../img/lghtmesh.png");
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 62.5%;
+	overflow: hidden;
+}
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+p, label, span {
+	font-size: 1.4em;
+}
+a {
+	color: #424242;
+	text-decoration: none;
+}
+.active {
+	color: #e7852e;
+}
+.strong {
+	font-weight: bold;
+}
+.italic {
+	font-style: italic;
+}
+/*---------------------------------------------------------------------------
+	
+			Header
+
+-----------------------------------------------------------------------------*/
+header {
+	margin: 0;
+	padding: 0;
+}
+/*---------------------------------------------------------------------------
+	
+			Menu
+
+-----------------------------------------------------------------------------*/
+#menu {
+	position: relative;
+	list-style-type: none;
+	margin: 0;
+	padding: 15px 20px;
+}
+#menu > li {
+	display: inline-block;
+	margin-right: 0.1%;
+	padding: 0;
+	text-align: center;
+}
+#menu > li > a {
+	display: block;
+	margin: 0;
+	padding: 7px 10px 7px 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.8em;
+	color: #424242;
+	text-decoration: none;
+}
+#menu > li:hover > a {
+	/*color: #e7852e;*/
+	color: #bf0615;
+}
+
+#menu > li > ul {
+	padding: 4px 10px 4px 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.8em;
+	line-height: 21px;
+	color: #424242;
+}
+#menu > li#disaster > ul, #menu > li#user > div {
+	margin: 0;
+	padding: 0 5px 10px 5px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+	-moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+	-webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
+	background: #ffffff;
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+}
+
+/*---------------------------------------------------------------------------
+	
+			Menu Disaster Left Side
+
+-----------------------------------------------------------------------------*/
+#menu > li#disaster {
+	position: relative;
+	width: 230px;
+	padding: 0;
+	background: url("../img/drop.png") no-repeat 210px center;
+	transition: all 0.5s;
+	-moz-transition: all 0.5s; /* Firefox 4 */
+	-webkit-transition: all 0.5s; /* Safari and Chrome */
+	-o-transition: all 0.5s; /* Opera */
+}
+#menu > li#disaster:hover {
+	/* Background color and gradients */
+	background-color: #ffffff;
+	border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+#menu > li#disaster > a:first-child {
+	display: block;
+	margin: 0;
+	padding: 7px 0 7px 50px;
+	text-align: left;
+	color: #161616;
+}
+#menu > li#disaster:hover > a:first-child {
+	color: #bf0615;
+}
+
+#menu > li#disaster > ul {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1001;
+	box-sizing: border-box; /* Opera/IE 8+ */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	transition: visibility 0s 0.5s, opacity 0.5s;
+	-moz-transition: visibility 0s 0.5s, opacity 0.5s; /* Firefox 4 */
+	-webkit-transition: visibility 0s 0.5s, opacity 0.5s; /* Safari and Chrome */
+	-o-transition: visibility 0s 0.5s, opacity 0.5s; /* Opera */
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+}
+
+#menu > li#disaster:hover > ul {
+	opacity: 1;
+	transition: opacity 0.5s;
+	visibility: visible;
+	-moz-transition: opacity 0.5s; /* Firefox 4 */
+	-webkit-transition: opacity 0.5s; /* Safari and Chrome */
+	-o-transition: opacity 0.5s; /* Opera */
+	transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-webkit-transition-delay: 0s;
+	-o-transition-delay: 0s;
+}
+
+#menu > li#disaster > ul > li {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+#menu > li#disaster > ul > li > a {
+	display: block;
+	text-align: left;
+	margin: 0;
+	padding: 12px 8px 12px 50px;
+}
+#menu > li#disaster > ul > li > a:hover {
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	background-color: #d9d9d9;
+}
+
+.world {
+	background-image: url('../img/world.png');
+	background-repeat: no-repeat;
+	background-position: 16px center;
+}
+.fire {
+	background-image: url('../img/fire.png');
+	background-repeat: no-repeat;
+	background-position: 8px center;
+}
+.earthquake {
+	background-image: url('../img/earthquake.png');
+	background-repeat: no-repeat;
+	background-position: 8px center;
+}
+.tornado {
+	background-image: url('../img/tornado.png');
+	background-repeat: no-repeat;
+	background-position: 8px center;
+}
+/*---------------------------------------------------------------------------
+	
+			Menu Log in Right Side
+
+-----------------------------------------------------------------------------*/
+#menu > li#user {
+	position: relative;
+	float: right;
+	margin: 0;
+	padding: 2px 0;
+	text-align: center;
+	color: #424242;
+	transition: all 0.5s 0.1s;
+	-moz-transition: all 0.5s 0.1s; /* Firefox 4 */
+	-webkit-transition: all 0.5s 0.1s; /* Safari and Chrome */
+	-o-transition: all 0.5s 0.1s; /* Opera */
+}
+#menu > li#user > a {
+	display: block;
+	margin-right: 7px;
+	padding: 7px 100px 7px 35px;
+	background: url("../img/user_icon.png") no-repeat 8px center, url("../img/drop.png") no-repeat right center;
+}
+#menu > li#user:hover {
+	/* Background color and gradients */
+	background-color: #ffffff;
+	border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-webkit-transition-delay: 0s;
+	-o-transition-delay: 0s;
+}
+#menu > li#user:hover > a {
+	color: #3b3b3b;
+}
+#menu > li#user.shown {
+	/* Background color and gradients */
+
+	background-color: #ffffff;
+	border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+#menu > li#user.shown > a {
+	color: #3b3b3b;
+}
+
+/*---------------------------------------------------------------------------
+	
+			Log In
+
+-----------------------------------------------------------------------------*/
+#menu > li > #login-menu {
+	/* Rounded Corners */
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	box-sizing: border-box; /* Opera/IE 8+ */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	border-radius: 0px 0px 5px 5px;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	transition: visibility 0s 0.6s, opacity 0.5s 0.1s;
+	-moz-transition: visibility 0s 0.6s, opacity 0.5s 0.1s; /* Firefox 4 */
+	-webkit-transition: visibility 0s 0.6s, opacity 0.5s 0.1s; /* Safari and Chrome */
+	-o-transition: visibility 0s 0.6s, opacity 0.5s 0.1s; /* Opera */
+}
+#menu > li:hover > #login-menu {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s; /* Firefox 4 */
+	-webkit-transition: opacity 0.5s; /* Safari and Chrome */
+	-o-transition: opacity 0.5s; /* Opera */
+	transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-webkit-transition-delay: 0s;
+	-o-transition-delay: 0s;
+}
+#menu > li > #login-menu.shown {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s; /* Firefox 4 */
+	-webkit-transition: opacity 0.5s; /* Safari and Chrome */
+	-o-transition: opacity 0.5s; /* Opera */
+	transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	-webkit-transition-delay: 0s;
+	-o-transition-delay: 0s;
+}
+/**************************** The Text in Menu Right ******************************************/
+#menu > #user > #login-menu > h2 {
+	margin: 10px 0 5px;
+	padding: 0 0 5px 5px;
+	font-size: 1.4em;
+	text-align: center;
+	text-indent: -50px;
+	color: #424242;
+}
+#menu > #user > #login-menu > h3 {
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	font-size: 1.36em;
+	font-weight: normal;
+	color: #424242;
+}
+#menu > #user > #login-menu > ul {
+	width: 195px;
+	margin: 0 auto;
+	padding: 0 7px;
+	list-style-type: none;
+	font-size: 1.2em;
+}
+#menu > #user > #login-menu > ul > li:before {
+	content: "\2013\2002";
+}
+#menu > #user > #login-menu > ul > li {
+	width: 200px;
+	text-align: center;
+	line-height: 1.3;
+	text-align: left;
+}
+#menu > #user > #login-menu > form {
+	margin: 0 0 5px;
+	text-align: left;
+	border: 2px solid #8b8b8b;
+}
+#menu > #user > #login-menu > form input[type="text"], #menu > #user > #login-menu > form input[type="password"] {
+	width: 100%;
+	padding: 7px 5px 7px 35px;
+	text-align: left;
+	font-size: 1.4em;
+	color: #444444;
+	border: none;
+	box-sizing: border-box; /* Opera/IE 8+ */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+}
+#menu > #user > #login-menu > form input[type="text"] {
+	border-bottom: 1px solid #dbdbdb;
+}
+#menu > #user > #login-menu > form > fieldset > #password-wrapper {
+	/*border-bottom: 2px solid #8b8b8b;*/
+}
+#menu > #user > #login-menu > form > fieldset > #password-wrapper > input[type="password"] {
+	width: 70%;
+}
+#menu > #user > #login-menu > form > fieldset > #password-wrapper > a {
+	display: inline-block;
+	margin: 0 0 0 15px;
+	font-size: 1.1em;
+	color: #888888;
+}
+/* Pretty 3D Button */
+.blue-button {
+	position: relative;
+	width: 150px;
+	margin: 1px auto 0;
+	padding: 0;
+	box-shadow: 0 3px 5px #2185b0;
+	-moz-box-shadow: 0 3px 5px #2185b0;
+	-webkit-box-shadow: 0 3px 5px #2185b0;
+	border: 1px solid #2185b0;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.blue-button > .blue-button-inner {
+	background-image: linear-gradient(bottom, #33a3d3 0%, #45b4e4 100%);
+	background-image: -o-linear-gradient(bottom, #33a3d3 0%, #45b4e4 100%);
+	background-image: -moz-linear-gradient(bottom, #33a3d3 0%, #45b4e4 100%);
+	background-image: -webkit-linear-gradient(bottom, #33a3d3 0%, #45b4e4 100%);
+	background-image: -ms-linear-gradient(bottom, #33a3d3 0%, #45b4e4 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #33a3d3), color-stop(1, #45b4e4));
+	border: 1px solid #73c7eb;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	color: #ffffff;
+	font-weight: 400;
+	padding: 6px 30px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+	width: 100%;
+	text-align: center;
+	/**** This gets rid of that weird white! *****/
+
+	margin: 0;
+}
+.blue-button:hover > .blue-button-inner {
+	background-image: linear-gradient(bottom, #33a3d3 100%, #45b4e4 0%);
+	background-image: -o-linear-gradient(bottom, #33a3d3 100%, #45b4e4 0%);
+	background-image: -moz-linear-gradient(bottom, #33a3d3 100%, #45b4e4 0%);
+	background-image: -webkit-linear-gradient(bottom, #33a3d3 100%, #45b4e4 0%);
+	background-image: -ms-linear-gradient(bottom, #33a3d3 100%, #45b4e4 0%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(1, #33a3d3), color-stop(0, #45b4e4));
+}
+.blue-button:active {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.blue-button:active > .blue-button-inner {
+	padding-top: 7px;
+	padding-bottom: 5px;
+}
+
+#menu > #user > #login-menu > form > fieldset > .blue-button {
+	width: 100%;
+	box-sizing: border-box; /* Opera/IE 8+ */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+}
+#menu > #user > #login-menu > form > fieldset > .blue-button > .blue-button-inner {
+	width: 100%;
+	font-weight: 900;
+	box-sizing: border-box; /* Opera/IE 8+ */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+}
+#menu > #user > #login-menu > span.terms{
+	display: block;
+	line-height: 1.8em;
+	font-size: 1.1em;
+	color: #aaaaaa;
+}
+/*---------------------------------------------------------------------------
+	
+			Main
+
+-----------------------------------------------------------------------------*/
+#main {
+	min-height: 300px;
+	height: 84%;
+	margin: 0;
+	padding: 0;
+}
+/*---------------------------------------------------------------------------
+	
+			Left SideBar
+
+-----------------------------------------------------------------------------*/
+#sidebar {
+	position: relative;
+	display: inline-block;
+	width: 13%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #424242;
+	z-index: 5;
+	box-sizing: border-box; /* Opera/IE 8+ */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+}
+#sidebar > ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#sidebar > ul > li {
+	margin: 13px 0;
+	padding: 0 10px 0 25px;
+	text-indent: 15px;
+}
+#sidebar > ul > li > a {
+	display: block;
+	padding: 7px 0 7px 30px;
+	font-size: 1.8em;
+	transform: scale(100%,100%);
+	-ms-transform: scale(1,1); /* IE 9 */
+	-webkit-transform: scale(1,1); /* Safari and Chrome */
+	-o-transform: scale(1,1); /* Opera */
+	-moz-transform: scale(100%,100%); /* Firefox */
+}
+#sidebar .contribute,
+#sidebar .explore,
+#sidebar .locate {
+	display: none;
+}
+
+.housing {
+	background: url( '../img/condominium.png' ) transparent no-repeat 4px center;
+}
+.food {
+	background: url( '../img/grocery.png' ) transparent no-repeat 4px center;
+}
+.goods {
+	background: url( '../img/departmentstore.png' ) transparent no-repeat 4px center;
+}
+.medical {
+	background: url( '../img/firstaid.png' ) transparent no-repeat 4px center;
+}
+.transport {
+	background: url( '../img/truck3.png' ) transparent no-repeat 4px center;
+}
+.services {
+	background: url( '../img/social.png' ) transparent no-repeat 4px center;
+}
+.animals {
+	background: url( '../img/pets.png' ) transparent no-repeat 4px center;
+}
+.other {
+	background: url( '../img/other.png' ) transparent no-repeat 4px center;
+}
+
+/*---------------------------------------------------------------------------
+	
+			Map
+
+-----------------------------------------------------------------------------*/
+#map {
+	position: relative;
+	display: inline-block;
+	min-width: 60%;
+	width: 86%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #ffffff;
+	font-size: 1.4em;
+	vertical-align: top;
+	z-index: 50;
+	border: 8px solid #ffffff;
+	box-sizing: border-box; /* Opera/IE 8+ */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+.infowindow > .description {
+	margin: 10px;
+}
+.infowindow > .location {
+	margin: 0 5px 10px;
+	color: #888888;
+}
+.infowindow > .contact {
+	margin: 0 10px 10px;
+}
+.infowindow > a.button {
+	float: right;
+	margin: 0 10px 10px;
+}
+
+/*---------------------------------------------------------------------------
+	
+			Filters
+
+-----------------------------------------------------------------------------*/
+.Housing_filter {
+	display: block;
+	position: absolute;
+	top: 70px;
+	left: 13.5%;
+	width: 225px;
+	height: 400px;
+	color: #424242;
+	z-index: 30;
+	padding: 5px;
+	border-radius: 10px 0 0 10px;
+	-moz-border-radius: 10px 0 0 10px;
+	-webkit-border-radius: 10px 0 0 10px;
+	/* Gradient background */
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+.Housing_filter form {
+	margin-top: 7px;
+	padding-left: 20px;
+}
+/*Housing Form button {
+	background: #ccc;
+	cursor: pointer;
+	border-top: solid 2px #eaeaea;
+	border-left: solid 2px #eaeaea;
+	border-bottom: solid 2px #777;
+	border-right: solid 2px #777;
+	padding: 5px 5px;					 
+}
+
+button.down {
+	background: #bbb;
+	border-top: solid 2px #777;
+	border-left: solid 2px #777;
+	border-bottom:solid 2px	#eaeaea;
+	border-right: solid 2px #eaeaea;
+}*/
+button, a.button {
+	display: inline-block;
+	padding: 4px 10px 4px;
+	line-height: 18px;
+	color: #333333;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	background-color: #fafafa;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-repeat: no-repeat;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+	border: 1px solid #ccc;
+	border-bottom-color: #bbb;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	/*background-image: linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
+	background-image: -o-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
+	background-image: -moz-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
+	background-image: -webkit-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
+	background-image: -ms-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
+
+	background-image: -webkit-gradient(
+		linear,
+		right top,
+		right bottom,
+		color-stop(0.44, rgb(35,59,237)),
+		color-stop(0.72, rgb(8,35,212))
+	);*/
+
+}
+.btn_hotel {
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+.btn_home {
+	border-radius: 4px 0px 0px 4px;
+	-moz-border-radius: 4px 0px 0px 4px;
+	-webkit-border-radius: 4px 0px 0px 4px;
+}
+.btn_shelter {
+	border-radius: 0px 4px 4px 0px;
+	-moz-border-radius: 4px 0px 0px 4px;
+	-webkit-border-radius: 4px 0px 0px 4px;
+}
+button:first-child, a.button:first-child {
+	margin-left: 0;
+}
+button:hover, a.button:hover {
+	color: #333333;
+	text-decoration: none;
+	background-color: #e6e6e6;
+	background-position: 0 -15px;
+	-webkit-transition: background-position 0.1s linear;
+	-moz-transition: background-position 0.1s linear;
+	-ms-transition: background-position 0.1s linear;
+	-o-transition: background-position 0.1s linear;
+	transition: background-position 0.1s linear;
+}
+button.active,
+button:active,
+a.button:active,
+a.button.active {
+	background-image: none;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	background-color: #e6e6e6;
+	background-color: #d9d9d9 \9;
+	color: rgba(0, 0, 0, 0.5);
+}
+.what_home {
+	width: 275px;
+	margin-top: 10px;
+	margin: 0 auto;
+}
+.people_selection {
+	margin-top: 10px;
+}
+.people_selection select {
+	margin-left: 20px;
+}
+.people_misc {
+	margin-top: 10px;
+}
+.checkbox {
+	margin-left: 50px;
+	width: 150px;
+}
+.checkbox label {
+	margin: 0 5px;
+}
+.duration_selection {
+	margin-top: 15px;
+}
+.filter-preferences {
+	margin-top: 10px;
+}
+.filter-other {
+	margin-top: 10px;
+}
+.back_button {
+	display: block;
+	margin-top: 20px;
+	width: 32px;
+	height: 32px;
+	text-indent: -999em;
+	margin-top: 30px;
+	margin-left: 75px;
+	background: url("../img/back_arrow.png") no-repeat;
+}
+.back_button:hover {
+	opacity: .7;
+	-moz-opacity: .7;
+	filter: alpha(opacity=77);
+}
+
+/*---------------------------------------------------------------------------
+	
+			Offer Relief Box
+
+-----------------------------------------------------------------------------*/
+#offerReliefBox > form {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+#offerReliefBox > form > fieldset {
+	display: block;
+	float: left;
+	margin: 0 20px 20px 0;
+	padding: 0;
+	border: none;
+}
+#offerReliefBox > form > fieldset.center {
+	display: block;
+	width: auto;
+	float: none;
+	clear: both;
+	margin: 120px auto 0;
+	text-align: center;
+}
+
+/*---------------------------------------------------------------------------
+	
+			Footer
+
+-----------------------------------------------------------------------------*/
+footer {
+	margin: 20px 0 0 11%;
+	padding: 0;
+}
+footer > ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+}
+footer > ul > li {
+	display: inline-block;
+	margin-right: 20px;
+}
+footer > ul > li > a {
+	font-size: 1.4em;
+}
+/*
+@media only screen and (max-width: 1000px) {
+	/* Style adjustments for viewports that meet the condition */
+/*	nav ul.left_ul {
+		position: absolute;
+		left: 8px;
+		display: block;
+	}
+	nav ul.left_ul li {
+		float: left;
+		margin-top: 25px;
+		margin-left: 10px;
+	}
+	nav ul.left_ul li:first-child {
+		background: #FFF;
+		border-radius: 18px;
+		-moz-border-radius: 18px;
+		-webkit-border-radius: 18px;
+		text-align: center;
+		padding: 10px;
+		margin-top: 15px;
+		margin-left: 0px;
+	}
+	nav ul.left_ul li:first-child ul {
+		position: absolute;
+		left: -999em;
+	}
+	nav ul.left_ul li:first-child img {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	
+}*/
