@@ -1,14 +1,5 @@
 <?php 
-// SR_ROOTPAGE is the local files on your server
-// eg. (in Linux) /home/content/html/folder1/folder2/folder3/
-// eg. (in Windows) C:\web\html\
-
-// SR_WEBROOTPAGE is the domain address plus the folders it falls under
-// eg. http://www.example.com/folder1/folder2/folder3/
-
-
 // Register Custom Error and Exception Handlers
-
 function SR_error_handler( $err_type, $err_str, $err_file, $err_line ) {
 	if( class_exists( 'SR_Error', false ) ) {
 		SR_Error::handleError( $err_type, $err_str, $err_file, $err_line );
@@ -113,11 +104,8 @@ final class SR_Config {
 			require SR_DIR_CLASSES . 'class.' . strtolower( $class_name ) . '.php';
 		} elseif ( file_exists( SR_DIR_ABSTRACTS . 'abstract.' . strtolower( $class_name ) . '.php' ) ) {
 			require SR_DIR_ABSTRACTS . 'abstract.' . strtolower( $class_name ) . '.php';
-		}/* elseif ( file_exists( SR_DIR_INTERFACES . 'interface.' . str_replace( '_interface', '', strtolower( $class_name ) ) . '.php' ) ) {
-			require_once SR_DIR_INTERFACES . 'interface.' . str_replace( '_interface', '', strtolower( $class_name ) ) . '.php';
-		} elseif ( file_exists( SR_DIR_HANDLERS . 'handler.' . str_replace( '_handler', '', strtolower( $class_name ) ) . '.php' ) ) {
-			require_once SR_DIR_HANDLERS . 'handler.' . str_replace( '_handler', '', strtolower( $class_name ) ) . '.php';
-		}*/ else { // If reached here, then the file doesn't exist
+		}
+		else { // If reached here, then the file doesn't exist
 			// Should throw exception, but since we're using the singleton design pattern, the exception can't be caught
 			echo SR_DIR_CLASSES . 'class.' . strtolower( $class_name ) . '.php';
 			die( 'Could not autoload the required file!' );
@@ -198,22 +186,6 @@ define( 'SR_AUTH_INVALID', 1 );
 define( 'SR_AUTH_DENIED', 2 );
 define( 'SR_AUTH_LOCKED', 3 );
 
-
-// Login Responses
-define( 'SR_LOGIN_ERR_SQL', -1 );
-define( 'SR_LOGIN_SUCCESS', 0 );
-define( 'SR_LOGIN_PARTSUCCESS', 1 );
-
-
-// System Messages
-define( 'SR_MSG_ERROR', -2 );
-define( 'SR_MSG_WARNING', -1 );
-define( 'SR_MSG_ANNOUNCEMENT', 0 );
-define( 'SR_MSG_SUCCESS', 1 );
-
-// User Module Responses
-define( 'SR_USER_ERR_SQL', 1 );
-define( 'SR_USER_ERR_INVALID', 2 );
 
 
 // Set the default timezone to GMT-7 (Mountain Time Zone)
