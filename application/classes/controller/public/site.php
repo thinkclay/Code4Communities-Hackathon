@@ -6,6 +6,7 @@ class Controller_Public_Site extends Controller_Public
 	public function action_index()
 	{
 		$this->template->id = 'home';
+		$this->template->fbproperty = 'test';
 		$this->template->main->content = 'main content';
 		$this->template->footer->content = 'footer content';
 		

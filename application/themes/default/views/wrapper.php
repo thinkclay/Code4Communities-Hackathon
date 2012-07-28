@@ -3,6 +3,7 @@
 	<head>
 		<title><?php echo (isset($title)) ? $title : 'Endpoint'; ?></title>
 
+<<<<<<< HEAD
 		<!-- META -->
 		<?php if (isset($fbproperty)) : ?>
 		<meta property="fb:app_id" content="<?= $fbproperty['app_id']; ?>" /> 
@@ -14,6 +15,10 @@
 		}
 		<?php endif; ?>
 		<meta charset="utf-8">
+=======
+		<?php echo View::factory('blocks/meta/facebook')->bind('fbproperty', $fbproperty); ?>
+
+>>>>>>> 09056b97d4f91096d0a394128d4a9733f93bb50a
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<?php if(isset($description)): ?><meta name="description" content="<?php echo $description?>" /><?php endif; ?>
