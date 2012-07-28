@@ -486,3 +486,142 @@
 --
 #0 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
 #1 {main}
+2012-07-28 03:49:12 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 03:49:12 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:53:42 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL annex was not found on this server. ~ SYSPATH/classes/kohana/request/client/internal.php [ 87 ]
+2012-07-28 10:53:42 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL annex was not found on this server. ~ SYSPATH/classes/kohana/request/client/internal.php [ 87 ]
+--
+#0 /Users/clay/Sites/Hackathon/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 /Users/clay/Sites/Hackathon/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
+#3 {main}
+2012-07-28 10:53:43 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:53:43 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:55:50 --- ERROR: ErrorException [ 1 ]: Class 'Controller_Public' not found ~ APPPATH/classes/controller/public.php [ 4 ]
+2012-07-28 10:55:50 --- STRACE: ErrorException [ 1 ]: Class 'Controller_Public' not found ~ APPPATH/classes/controller/public.php [ 4 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2012-07-28 10:55:51 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:55:51 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:56:29 --- ERROR: ErrorException [ 1 ]: Class 'A2' not found ~ MODPATH/annex/classes/controller/public.php [ 20 ]
+2012-07-28 10:56:29 --- STRACE: ErrorException [ 1 ]: Class 'A2' not found ~ MODPATH/annex/classes/controller/public.php [ 20 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2012-07-28 10:56:29 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:56:29 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:57:06 --- ERROR: Kohana_Exception [ 0 ]: Attempted to load an invalid or missing module 'acl' at 'MODPATH/annex/submodules/auth/acl' ~ SYSPATH/classes/kohana/core.php [ 542 ]
+2012-07-28 10:57:06 --- STRACE: Kohana_Exception [ 0 ]: Attempted to load an invalid or missing module 'acl' at 'MODPATH/annex/submodules/auth/acl' ~ SYSPATH/classes/kohana/core.php [ 542 ]
+--
+#0 /Users/clay/Sites/Hackathon/modules/annex/classes/annex/core.php(46): Kohana_Core::modules(Array)
+#1 /Users/clay/Sites/Hackathon/modules/annex/classes/annex/core.php(138): Annex_Core->__construct(Array, Array)
+#2 /Users/clay/Sites/Hackathon/modules/annex/init.php(53): Annex_Core::factory(Array, Array)
+#3 /Users/clay/Sites/Hackathon/system/classes/kohana/core.php(565): require_once('/Users/clay/Sit...')
+#4 /Users/clay/Sites/Hackathon/application/bootstrap.php(101): Kohana_Core::modules(Array)
+#5 /Users/clay/Sites/Hackathon/index.php(102): require('/Users/clay/Sit...')
+#6 {main}
+2012-07-28 10:57:07 --- ERROR: Kohana_Exception [ 0 ]: Attempted to load an invalid or missing module 'acl' at 'MODPATH/annex/submodules/auth/acl' ~ SYSPATH/classes/kohana/core.php [ 542 ]
+2012-07-28 10:57:07 --- STRACE: Kohana_Exception [ 0 ]: Attempted to load an invalid or missing module 'acl' at 'MODPATH/annex/submodules/auth/acl' ~ SYSPATH/classes/kohana/core.php [ 542 ]
+--
+#0 /Users/clay/Sites/Hackathon/modules/annex/classes/annex/core.php(46): Kohana_Core::modules(Array)
+#1 /Users/clay/Sites/Hackathon/modules/annex/classes/annex/core.php(138): Annex_Core->__construct(Array, Array)
+#2 /Users/clay/Sites/Hackathon/modules/annex/init.php(53): Annex_Core::factory(Array, Array)
+#3 /Users/clay/Sites/Hackathon/system/classes/kohana/core.php(565): require_once('/Users/clay/Sit...')
+#4 /Users/clay/Sites/Hackathon/application/bootstrap.php(101): Kohana_Core::modules(Array)
+#5 /Users/clay/Sites/Hackathon/index.php(102): require('/Users/clay/Sit...')
+#6 {main}
+2012-07-28 10:58:38 --- ERROR: Kohana_Exception [ 0 ]: Attempted to load an invalid or missing module 'acl' at 'MODPATH/annex/submodules/auth/acl' ~ SYSPATH/classes/kohana/core.php [ 542 ]
+2012-07-28 10:58:38 --- STRACE: Kohana_Exception [ 0 ]: Attempted to load an invalid or missing module 'acl' at 'MODPATH/annex/submodules/auth/acl' ~ SYSPATH/classes/kohana/core.php [ 542 ]
+--
+#0 /Users/clay/Sites/Hackathon/modules/annex/classes/annex/core.php(46): Kohana_Core::modules(Array)
+#1 /Users/clay/Sites/Hackathon/modules/annex/classes/annex/core.php(138): Annex_Core->__construct(Array, Array)
+#2 /Users/clay/Sites/Hackathon/modules/annex/init.php(53): Annex_Core::factory(Array, Array)
+#3 /Users/clay/Sites/Hackathon/system/classes/kohana/core.php(565): require_once('/Users/clay/Sit...')
+#4 /Users/clay/Sites/Hackathon/application/bootstrap.php(101): Kohana_Core::modules(Array)
+#5 /Users/clay/Sites/Hackathon/index.php(102): require('/Users/clay/Sit...')
+#6 {main}
+2012-07-28 10:58:39 --- ERROR: Kohana_Exception [ 0 ]: Attempted to load an invalid or missing module 'acl' at 'MODPATH/annex/submodules/auth/acl' ~ SYSPATH/classes/kohana/core.php [ 542 ]
+2012-07-28 10:58:39 --- STRACE: Kohana_Exception [ 0 ]: Attempted to load an invalid or missing module 'acl' at 'MODPATH/annex/submodules/auth/acl' ~ SYSPATH/classes/kohana/core.php [ 542 ]
+--
+#0 /Users/clay/Sites/Hackathon/modules/annex/classes/annex/core.php(46): Kohana_Core::modules(Array)
+#1 /Users/clay/Sites/Hackathon/modules/annex/classes/annex/core.php(138): Annex_Core->__construct(Array, Array)
+#2 /Users/clay/Sites/Hackathon/modules/annex/init.php(53): Annex_Core::factory(Array, Array)
+#3 /Users/clay/Sites/Hackathon/system/classes/kohana/core.php(565): require_once('/Users/clay/Sit...')
+#4 /Users/clay/Sites/Hackathon/application/bootstrap.php(101): Kohana_Core::modules(Array)
+#5 /Users/clay/Sites/Hackathon/index.php(102): require('/Users/clay/Sit...')
+#6 {main}
+2012-07-28 10:59:54 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:59:54 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:59:54 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:59:54 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
+#1 {main}
+2012-07-28 11:00:01 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 11:00:01 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
+#1 {main}
+2012-07-28 11:01:24 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL populate was not found on this server. ~ SYSPATH/classes/kohana/request/client/internal.php [ 87 ]
+2012-07-28 11:01:24 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL populate was not found on this server. ~ SYSPATH/classes/kohana/request/client/internal.php [ 87 ]
+--
+#0 /Users/clay/Sites/Hackathon/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 /Users/clay/Sites/Hackathon/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
+#3 {main}
+2012-07-28 10:07:52 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:07:52 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(109): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:10:39 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:10:39 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:10:42 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:10:42 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:10:43 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:10:43 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:10:53 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:10:53 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:15:17 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:15:17 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:15:18 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:15:18 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-28 10:16:14 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-28 10:16:14 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}

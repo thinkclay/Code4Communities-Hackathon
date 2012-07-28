@@ -1,5 +1,4 @@
 <?php 
-
 // SR_ROOTPAGE is the local files on your server
 // eg. (in Linux) /home/content/html/folder1/folder2/folder3/
 // eg. (in Windows) C:\web\html\
@@ -7,34 +6,6 @@
 // SR_WEBROOTPAGE is the domain address plus the folders it falls under
 // eg. http://www.example.com/folder1/folder2/folder3/
 
-
-// Set this file as the root of the MyComm System
-// Note: This constant determines whether this file (config.php) is included 
-//       in other files. If it isn't, then access is denied. This is to 
-//       keep users from directly accessing internal files and also keeps the 
-//       entire MyComm system integrated.
-// IMPORTANT: Hence, every file in the MyComm system should check for this 
-//       constant and deny access if it isn't defined.
-define( '_SR_EXEC', 1 );
-
-/*** Global Configuration ***/
-
-// Site Status
-define( 'SR_ST_OFFLINE', 0 );
-define( 'SR_ST_DEBUG', 1 );
-define( 'SR_ST_LIVE', 2 );
-/*
-	Status Codes:
-	
-	SR_ST_OFFLINE - Under Maintenance (site is turned off and maintenance message is shown)
-	SR_ST_DEBUG - Debug Mode (all errors and technical details are shown)
-	SR_ST_LIVE - Live (user-friendly errors are shown, code fails gracefully)
-*/
-
-define( 'SR_STATUS', SR_ST_DEBUG );
-
-// Global Generic Error Message
-define( 'SR_GLOBAL_ERR', 'An error occurred while initializing Sparkrelief.' );
 
 // Register Custom Error and Exception Handlers
 
