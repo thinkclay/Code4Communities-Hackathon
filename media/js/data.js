@@ -259,7 +259,7 @@ function get_crime ()
 	$map.gmap3({ action: 'clear', tag: 'crime' });
 	
 		geoRequest = $.ajax({
-			type	:'GET',
+			type	: 'GET',
 			data	: { 
 				token: '287475de3e36adb61c1a3efc124e906ab0abae153a0daa157fa538cdb1cd90ca',
 				limit: 500
@@ -330,8 +330,89 @@ function get_crime ()
 					console.log('ajax error');
 			}
 		});
+}
+
+function get_parks () 
+{
+	$map.gmap3({ action: 'clear', tag: 'parks' });
 	
-	
+		geoRequest = $.ajax({
+			type	: 'GET',
+			data	: { 
+				token: '287475de3e36adb61c1a3efc124e906ab0abae153a0daa157fa538cdb1cd90ca',
+				limit: 500
+			},
+			url		: '/api/locations/recreation/parks',
+			success	: function (result) {
+				if ( result.length >= 1 ) 
+				{
+					data = [];
+					
+					for ( i=0; i<result.length; i++ ) 
+					{
+						if ( typeof result[i].latitude !== 'null' && typeof result[i].longitude !== 'null' )
+						{
+							data[i] = {};
+							data[i].data = result[i];
+							data[i].lat = result[i].latitude;
+							data[i].lng = result[i].longitude;
+							
+							console.log('point: '+result[i].latitude+', '+result[i].longitude);
+						}
+					}
+					
+					
+					$map.gmap3({ 
+						action	: 'addMarkers',
+						tag     : 'parks',
+						radius	: 20,
+						markers	: data,
+						clusters: {
+							0: {
+								content: '<div class="cluster cluster-small">CLUSTER_COUNT</div>',
+								width: 35,
+								height: 39
+							}
+						},
+						marker	: {
+							options	: { icon: '/media/img/map-icon-crime.png', zIndex: 555 },
+							events	: {  
+				                mouseover: function(marker, event, data){
+				                  $(this).gmap3(
+				                    { action:'clear', name:'overlay'},
+				                    { action:'addOverlay',
+				                      latLng: marker.getPosition(),
+				                      content:  '<div class="infobullet">' +
+				                                  '<div class="title">'+data.location+' / '+data.offense_category_id+'</div>'+
+				                                  '<div class="text">First Occurance: '+data.first_occurance_date+
+				                                  	'<br />Last Occurance: '+data.last_occurance_date+
+				                                  	'<br />Incident Address: '+data.incident_address+
+				                                  	'<br />Neighborhood: '+data.neighborhood_id+
+				                                  '</div>' +
+				                                '</div>',
+				                      offset: {
+				                        x:-46,
+				                        y:-98
+				                      }
+				                    }
+				                  );
+				                },
+				                mouseout: function(){
+				                  $(this).gmap3({action:'clear', name:'overlay'});
+								},
+								click: function(marker, event, data){
+									window.location = '/browse/detail/'+data.listing_num;
+								}
+							}
+						}
+					});	
+				}
+			},
+			error	: function (data) {
+				if (typeof console == 'object')
+					console.log('ajax error');
+			}
+		});
 }
 
 function get_attractions() {
@@ -359,7 +440,7 @@ function get_attractions() {
 				$.ajax({
 					type	: 'GET',
 					dataType: 'json',
-					url		: '/api/ajax/public/attractions',
+					url		: 'htt://dev.qwizzle.us/api/ajax/public/attractions',
 					data	: { 
 						//key			: __KEY__, 
 						points		: points.clean,
@@ -431,8 +512,6 @@ function get_attractions() {
 	}
 	
 	function addPins (){
-		//console.log(pins);
-		
 		$map.gmap3(
 			{
 				action 	: 'addMarkers',
@@ -463,9 +542,6 @@ function get_attractions() {
 			}
 		);	
 	}
-	
-	
-	
 }
 
 
@@ -586,6 +662,16 @@ $(function(){
 		if ( $(this).hasClass('crime') )
 		{
 			get_crime();
+		}
+		
+		if ( $(this).hasClass('parks') )
+		{
+			get_parks();
+		}
+		
+		if ( $(this).hasClass('schools') )
+		{
+			get_attractions();
 		}
 		
 		return false;

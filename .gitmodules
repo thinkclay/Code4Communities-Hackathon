@@ -1,3 +1,0 @@
-[submodule "modules/annex"]
-	path = modules/annex
-	url = git@github.com:thinkclay/annex.git
