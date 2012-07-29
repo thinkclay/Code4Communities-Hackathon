@@ -97,8 +97,12 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	'annex'		=> MODPATH.'annex'		// Custom Layer
+	'annex'			=> MODPATH.'annex',	
+	'api'			=> MODPATH.'api',
+	'userguide'		=> MODPATH.'userguide',
+  	'database'		=> MODPATH.'database',   
 ));
+
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
