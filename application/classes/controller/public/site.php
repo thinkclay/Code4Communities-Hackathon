@@ -20,7 +20,6 @@ class Controller_Public_Site extends Controller_Public
 		
 		$this->template->less[] = 'media/css/reveal.less';
 		$this->template->less[] = 'media/css/stylesheet.less';
-		
 		$this->template->less[] = 'media/css/map.less';
 		
 		/*

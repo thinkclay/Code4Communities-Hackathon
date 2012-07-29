@@ -16,7 +16,7 @@ function get_crime ()
 			type	: 'GET',
 			data	: { 
 				token: '287475de3e36adb61c1a3efc124e906ab0abae153a0daa157fa538cdb1cd90ca',
-				limit: 500
+				limit: 1500
 			},
 			url		:'/api/stats/crime',
 			success	: function (result) {
@@ -94,7 +94,7 @@ function get_parks ()
 			type	: 'GET',
 			data	: { 
 				token: '287475de3e36adb61c1a3efc124e906ab0abae153a0daa157fa538cdb1cd90ca',
-				limit: 500
+				limit: 1500
 			},
 			url		: '/api/locations/recreation/parks',
 			success	: function (result) {
@@ -117,7 +117,7 @@ function get_parks ()
 						markers	: data,
 						clusters: {
 							0: {
-								content: '<div class="cluster cluster-small">CLUSTER_COUNT</div>',
+								content: '<div class="cluster cluster-small parks">CLUSTER_COUNT</div>',
 								width: 35,
 								height: 39
 							}
