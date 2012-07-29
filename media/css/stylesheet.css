@@ -1,8 +1,8 @@
 /*---------------------------------------------------------------------------
-	
-			General Styles
 
------------------------------------------------------------------------------*/
+ General Styles
+
+ -----------------------------------------------------------------------------*/
 * {
 	outline: none;
 }
@@ -41,19 +41,19 @@ a {
 	font-style: italic;
 }
 /*---------------------------------------------------------------------------
-	
-			Header
 
------------------------------------------------------------------------------*/
+ Header
+
+ -----------------------------------------------------------------------------*/
 header {
 	margin: 0;
 	padding: 0;
 }
 /*---------------------------------------------------------------------------
-	
-			Menu
 
------------------------------------------------------------------------------*/
+ Menu
+
+ -----------------------------------------------------------------------------*/
 #menu {
 	position: relative;
 	list-style-type: none;
@@ -100,10 +100,10 @@ header {
 }
 
 /*---------------------------------------------------------------------------
-	
-			Menu Disaster Left Side
 
------------------------------------------------------------------------------*/
+ Menu Disaster Left Side
+
+ -----------------------------------------------------------------------------*/
 #menu > li#disaster {
 	position: relative;
 	width: 230px;
@@ -209,10 +209,10 @@ header {
 	background-position: 8px center;
 }
 /*---------------------------------------------------------------------------
-	
-			Menu Log in Right Side
 
------------------------------------------------------------------------------*/
+ Menu Log in Right Side
+
+ -----------------------------------------------------------------------------*/
 #menu > li#user {
 	position: relative;
 	float: right;
@@ -264,10 +264,10 @@ header {
 }
 
 /*---------------------------------------------------------------------------
-	
-			Log In
 
------------------------------------------------------------------------------*/
+ Log In
+
+ -----------------------------------------------------------------------------*/
 #menu > li > #login-menu {
 	/* Rounded Corners */
 	position: absolute;
@@ -443,17 +443,17 @@ header {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box; /* Firefox, other Gecko */
 }
-#menu > #user > #login-menu > span.terms{
+#menu > #user > #login-menu > span.terms {
 	display: block;
 	line-height: 1.8em;
 	font-size: 1.1em;
 	color: #aaaaaa;
 }
 /*---------------------------------------------------------------------------
-	
-			Main
 
------------------------------------------------------------------------------*/
+ Main
+
+ -----------------------------------------------------------------------------*/
 #main {
 	min-height: 300px;
 	height: 84%;
@@ -461,10 +461,10 @@ header {
 	padding: 0;
 }
 /*---------------------------------------------------------------------------
-	
-			Left SideBar
 
------------------------------------------------------------------------------*/
+ Left SideBar
+
+ -----------------------------------------------------------------------------*/
 #sidebar {
 	position: relative;
 	display: inline-block;
@@ -478,8 +478,14 @@ header {
 	-moz-box-sizing: border-box; /* Firefox, other Gecko */
 }
 
-.zip_box { padding: 0px 25px; text-align: center; }
-.zip_box a { font-weight: bold; color: #1f3de3; }
+.zip_box {
+	padding: 0px 25px;
+	text-align: center;
+}
+.zip_box a {
+	font-weight: bold;
+	color: #1f3de3;
+}
 
 #sidebar > ul {
 	list-style-type: none;
@@ -501,47 +507,45 @@ header {
 	-o-transform: scale(1,1); /* Opera */
 	-moz-transform: scale(100%,100%); /* Firefox */
 }
-#sidebar .contribute,
-#sidebar .explore,
-#sidebar .locate {
+#sidebar .contribute, #sidebar .explore, #sidebar .locate {
 	display: none;
 }
 
 .housing {
- background: url( '/media/img/condominium.png' ) transparent no-repeat 4px center;
+	background: url( '/media/img/condominium.png' ) transparent no-repeat 4px center;
 }
 .crime {
- background: url( '/media/img/police.png' ) transparent no-repeat 4px center;
+	background: url( '/media/img/police.png' ) transparent no-repeat 4px center;
 }
 .demographic {
- background: url( '/media/img/demographic.png' ) transparent no-repeat 4px center;
+	background: url( '/media/img/demographic.png' ) transparent no-repeat 4px center;
 }
 .schools {
- background: url( '/media/img/school.png' ) transparent no-repeat 4px center;
+	background: url( '/media/img/school.png' ) transparent no-repeat 4px center;
 }
 .transport {
- background: url( '/media/img/bus.png' ) transparent no-repeat 4px center;
+	background: url( '/media/img/bus.png' ) transparent no-repeat 4px center;
 }
 .parks {
- background: url( '/media/img/park.png' ) transparent no-repeat 4px center;
+	background: url( '/media/img/park.png' ) transparent no-repeat 4px center;
 }
 .library {
- background: url( '/media/img/library.png' ) transparent no-repeat 4px center;
+	background: url( '/media/img/library.png' ) transparent no-repeat 4px center;
 }
 .interest {
- background: url( '/media/img/interest.png' ) transparent no-repeat 4px center;
+	background: url( '/media/img/interest.png' ) transparent no-repeat 4px center;
 }
 .public_service {
- background: url( '/media/img/ems.png' ) transparent no-repeat 4px center;
+	background: url( '/media/img/ems.png' ) transparent no-repeat 4px center;
 }
 
 /*---------------------------------------------------------------------------
-	
-			Map
 
------------------------------------------------------------------------------*/
+ Map
+
+ -----------------------------------------------------------------------------*/
 #map-container {
-position: relative;
+	position: relative;
 	display: inline-block;
 	min-width: 60%;
 	width: 84%;
@@ -560,73 +564,64 @@ position: relative;
 	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
-	#drawing {
-		border: 1px solid #BEA280;
-		box-shadow: inset 0 0 2em rgba(0,0,0,0.5);
-		height: 100%;
-		left: 0;
-		pointer-events: none;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: 2;
-	}
-	#map {
-		height: 100%;
-		position: relative;
-		width: 100%;
-		z-index: 1;
-	}
+#drawing {
+	border: 1px solid #BEA280;
+	box-shadow: inset 0 0 2em rgba(0,0,0,0.5);
+	height: 100%;
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+#map {
+	height: 100%;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
 
 .cluster {
-  color:#ffffff;
-  font-size:11px;
-  line-height:19px;
-  text-align:center;
-  z-index:666;
+	color: #ffffff;
+	font-size: 10px;
+	line-height: 10px;
+	text-align: center;
+	z-index: 666;
 }
 .cluster-small {
-  background:url('/resources/images/icons/map/marker-blue-small.png') no-repeat top left;
-  height:32px;
-  width:20px;
+	background: rgba(0,0,0,0.6);
+	border-radius: 10px;
+	padding: 5px;
+	height: 12px;
+	width: 10px;
 }
-.infobulle {
-  overflow:hidden;
-  cursor:default;
-  clear:both;
-  position:relative;
-  padding:0pt;
-  background-color:#393939;
-  border-radius:4px 4px;
-  -moz-border-radius:4px 4px;
-  -webkit-border-radius:4px 4px;
-  border:1px solid #2c2c2c;
-}
-.infobulle .bg {
-  font-size:1px;
-  height:16px;
-  border:0px;
-  width:100%;
-  padding:0px;
-  margin:0px;
-  background-color:#5e5e5e;
-}
-.infobulle .text {
-  color:#ffffff;
-  font-family:Verdana;
-  font-size:11px;
-  font-weight:bold;
-  line-height:25px;
-  padding:4px 20px;
-  text-shadow:0 -1px 0 #000000;
-  white-space:nowrap;
-  margin-top:-17px;
-}
-.infobulle.drive .text {
-  background:url(images/drive.png) no-repeat 2px center;
-  padding:4px 20px 4px 36px;
+.infobullet {
+	overflow: hidden;
+	cursor: default;
+	clear: both;
+	position: relative;
+	padding: 15px;
+	background-color: #393939;
+	border-radius: 4px 4px;
+	border: 1px solid #2c2c2c;
 }
 
+.infobullet .title {
+	color: #ffffff;
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-shadow: 0 -1px 0 #000000;
+	white-space: nowrap;
+}
+.infobullet .text {
+	color: #ffffff;
+	font-size: 10px;
+	line-height: 15px;
+	text-shadow: 0 -1px 0 #000000;
+}
 
 .infowindow > .description {
 	margin: 10px;
@@ -644,10 +639,10 @@ position: relative;
 }
 
 /*---------------------------------------------------------------------------
-	
-			Filters
 
------------------------------------------------------------------------------*/
+ Filters
+
+ -----------------------------------------------------------------------------*/
 .Housing_filter {
 	display: none;
 	position: absolute;
@@ -672,22 +667,22 @@ position: relative;
 	padding-left: 20px;
 }
 /*Housing Form button {
-	background: #ccc;
-	cursor: pointer;
-	border-top: solid 2px #eaeaea;
-	border-left: solid 2px #eaeaea;
-	border-bottom: solid 2px #777;
-	border-right: solid 2px #777;
-	padding: 5px 5px;					 
-}
+ background: #ccc;
+ cursor: pointer;
+ border-top: solid 2px #eaeaea;
+ border-left: solid 2px #eaeaea;
+ border-bottom: solid 2px #777;
+ border-right: solid 2px #777;
+ padding: 5px 5px;
+ }
 
-button.down {
-	background: #bbb;
-	border-top: solid 2px #777;
-	border-left: solid 2px #777;
-	border-bottom:solid 2px	#eaeaea;
-	border-right: solid 2px #eaeaea;
-}*/
+ button.down {
+ background: #bbb;
+ border-top: solid 2px #777;
+ border-left: solid 2px #777;
+ border-bottom:solid 2px	#eaeaea;
+ border-right: solid 2px #eaeaea;
+ }*/
 button, a.button {
 	display: inline-block;
 	padding: 4px 10px 4px;
@@ -714,18 +709,18 @@ button, a.button {
 	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 	cursor: pointer;
 	/*background-image: linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
-	background-image: -o-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
-	background-image: -moz-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
-	background-image: -webkit-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
-	background-image: -ms-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
+	 background-image: -o-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
+	 background-image: -moz-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
+	 background-image: -webkit-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
+	 background-image: -ms-linear-gradient(top, rgb(35,59,237) 44%, rgb(8,35,212) 72%);
 
-	background-image: -webkit-gradient(
-		linear,
-		right top,
-		right bottom,
-		color-stop(0.44, rgb(35,59,237)),
-		color-stop(0.72, rgb(8,35,212))
-	);*/
+	 background-image: -webkit-gradient(
+	 linear,
+	 right top,
+	 right bottom,
+	 color-stop(0.44, rgb(35,59,237)),
+	 color-stop(0.72, rgb(8,35,212))
+	 );*/
 
 }
 .btn_hotel {
@@ -757,10 +752,7 @@ button:hover, a.button:hover {
 	-o-transition: background-position 0.1s linear;
 	transition: background-position 0.1s linear;
 }
-button.active,
-button:active,
-a.button:active,
-a.button.active {
+button.active, button:active, a.button:active, a.button.active {
 	background-image: none;
 	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -816,10 +808,10 @@ a.button.active {
 }
 
 /*---------------------------------------------------------------------------
-	
-			Offer Relief Box
 
------------------------------------------------------------------------------*/
+ Offer Relief Box
+
+ -----------------------------------------------------------------------------*/
 #offerReliefBox > form {
 	display: block;
 	margin: 0;
@@ -842,10 +834,10 @@ a.button.active {
 }
 
 /*---------------------------------------------------------------------------
-	
-			Footer
 
------------------------------------------------------------------------------*/
+ Footer
+
+ -----------------------------------------------------------------------------*/
 footer {
 	margin: 20px 0 0 11%;
 	padding: 0;
@@ -864,35 +856,35 @@ footer > ul > li > a {
 	font-size: 1.4em;
 }
 /*
-@media only screen and (max-width: 1000px) {
-	/* Style adjustments for viewports that meet the condition */
+ @media only screen and (max-width: 1000px) {
+ /* Style adjustments for viewports that meet the condition */
 /*	nav ul.left_ul {
-		position: absolute;
-		left: 8px;
-		display: block;
-	}
-	nav ul.left_ul li {
-		float: left;
-		margin-top: 25px;
-		margin-left: 10px;
-	}
-	nav ul.left_ul li:first-child {
-		background: #FFF;
-		border-radius: 18px;
-		-moz-border-radius: 18px;
-		-webkit-border-radius: 18px;
-		text-align: center;
-		padding: 10px;
-		margin-top: 15px;
-		margin-left: 0px;
-	}
-	nav ul.left_ul li:first-child ul {
-		position: absolute;
-		left: -999em;
-	}
-	nav ul.left_ul li:first-child img {
-		margin-left: 5px;
-		margin-right: 5px;
-	}
-	
-}*/
+ position: absolute;
+ left: 8px;
+ display: block;
+ }
+ nav ul.left_ul li {
+ float: left;
+ margin-top: 25px;
+ margin-left: 10px;
+ }
+ nav ul.left_ul li:first-child {
+ background: #FFF;
+ border-radius: 18px;
+ -moz-border-radius: 18px;
+ -webkit-border-radius: 18px;
+ text-align: center;
+ padding: 10px;
+ margin-top: 15px;
+ margin-left: 0px;
+ }
+ nav ul.left_ul li:first-child ul {
+ position: absolute;
+ left: -999em;
+ }
+ nav ul.left_ul li:first-child img {
+ margin-left: 5px;
+ margin-right: 5px;
+ }
+
+ }*/

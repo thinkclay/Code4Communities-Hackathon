@@ -299,9 +299,8 @@ function get_crime ()
 				                    { action:'clear', name:'overlay'},
 				                    { action:'addOverlay',
 				                      latLng: marker.getPosition(),
-				                      content:  '<div class="infobulle">' +
-				                                  '<div class="bg"></div>' +
-				                                  '<div class="text">'+data.offense_type_id+' / '+data.offense_category_id+'</div>'+
+				                      content:  '<div class="infobullet">' +
+				                                  '<div class="title">'+data.offense_type_id+' / '+data.offense_category_id+'</div>'+
 				                                  '<div class="text">First Occurance: '+data.first_occurance_date+
 				                                  	'<br />Last Occurance: '+data.last_occurance_date+
 				                                  	'<br />Incident Address: '+data.incident_address+
