@@ -32,7 +32,7 @@
 			<div class="navbar-inner">
 				<div class="container-fluid">
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-					<a class="brand" href="#">End Point&trade; API</a>
+					<a class="brand" href="/api/docs">End Point&trade; API</a>
 				</div>
 			</div>
 		</div>
