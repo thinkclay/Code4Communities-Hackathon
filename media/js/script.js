@@ -87,33 +87,34 @@ var $map = {
 	disasterMarkers: new MarkerGroup(),
 	offerMarkers: new MarkerGroup(),
 	disasterIcons: {
-		'1': '/img/drought.png',
-		'2': '/img/earthquake.png',
-		'3': '/img/fire.png',
-		'4': '/img/flood.png',
-		'5': '/img/general.png',
-		'6': '/img/hurricane.png',
-		'7': '/img/tornado.png',
-		'8': '/img/tsunami.png',
-		'9': '/img/volcano.png'
+		'1': '/media/img/drought.png',
+		'2': '/media/img/earthquake.png',
+		'3': '/media/img/fire.png',
+		'4': '/media/img/flood.png',
+		'5': '/media/img/general.png',
+		'6': '/media/img/hurricane.png',
+		'7': '/media/img/tornado.png',
+		'8': '/media/img/tsunami.png',
+		'9': '/media/img/volcano.png'
 	},
-	offerIcons: {
-		'1': '/img/condominium.png',
-		'2': '/img/grocery.png',
-		'3': '/img/departmentstore.png',
-		'4': '/img/firstaid.png',
-		'5': '/img/truck3.png',
-		'6': '/img/social.png',
-		'7': '/img/pets.png',
-		'8': '/img/other.png'
+	 offerIcons: {
+		'1': '/media/img/condominium.png',
+		'2': '/media/img/police.png',
+		'3': '/media/img/demographic.png',
+		'4': '/media/img/school.png',
+		'5': '/media/img/bus.png',
+		'6': '/media/img/park.png',
+		'4': '/media/img/library.png',
+		'5': '/media/img/interest.png',
+		'6': '/media/img/ems.png'
 	},
 	offerMarkerIcons: {
-		accomodations: '/img/icons/house-25-pog.png',
-		products: '/img/icons/box-25-pog.png',
-		nourishment: '/img/icons/food-25-pog.png',
-		medical: '/img/icons/medic-25-pog.png',
-		transport: '/img/icons/car-25-pog.png',
-		animals: '/img/icons/pet-25-pog.png'
+		accomodations: '/media/img/icons/house-25-pog.png',
+		products: '/media/img/icons/box-25-pog.png',
+		nourishment: '/media/img/icons/food-25-pog.png',
+		medical: '/media/img/icons/medic-25-pog.png',
+		transport: '/media/img/icons/car-25-pog.png',
+		animals: '/media/img/icons/pet-25-pog.png'
 	},
 	initMap: function ( element ) {
 		$map.map = new google.maps.Map( document.getElementById( element ), $map.options );
@@ -455,3 +456,54 @@ $( document ).ready( function () {
 	//Call Google Map Api Initialize
 	$map.initMap( 'map' );
 } );
+
+//Edits for JS fiel
+/*
+ var crime =
+ [
+  {
+   "incident_id": "2009118827.0",
+   "offense_id": "2009118827299901",
+   "offense_code": "2999",
+   "offense_code_extension": "1",
+   "offense_type_id": "criminal-mischief-mtr-veh",
+   "offense_category_id": "public-disorder",
+   "first_occurance_date": "2009-02-23 18:00:00",
+   "last_occurance_date": "2009-02-24 06:30:00",
+   "reported_date": "2009-02-24 07:16:59",
+   "incident_address": "5300 BLK N TUCSON WAY",
+   "geo_x": "3185398.0",
+   "geo_y": "1713751.0",
+   "geo_lon": "-104.8402543",
+   "geo_lat": "39.7912063",
+   "district_id": "5",
+   "precinct_id": "521",
+   "neighborhood_id": "montbello"
+  }
+ ]
+
+var disasters = 
+[
+  {
+    id: "1",
+    location: "Alberta, Canada",
+    name: "Alberta Fires",
+    type: "3"
+  },
+
+  {
+    id: "2",
+    location: "Colorado, USA",
+    name: "Colorado Fires",
+    type: "3"
+  }
+]
+
+$map.geocoder.geocode( {'address' : crime[0].incident_address}, function(result, status){
+              if (status == google.maps.GeocoderStatus.OK) {
+                $map.addMarker('disaster-' + disasters[i].id, result[0].geometry.location, disasters[i].type, disasters[i].name);
+                $map.showMarker('disaster-' + disasters[i].id);
+              } else {
+                alert( 'Geocode was not successful for the following reason: ' + status );
+              }
+}); */

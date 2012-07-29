@@ -2491,3 +2491,41 @@
 --
 #0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
 #1 {main}
+2012-07-28 19:46:37 --- ERROR: ErrorException [ 2 ]: Illegal string offset 'app_id' ~ APPPATH\themes\default\views\wrapper.php [ 9 ]
+2012-07-28 19:46:37 --- STRACE: ErrorException [ 2 ]: Illegal string offset 'app_id' ~ APPPATH\themes\default\views\wrapper.php [ 9 ]
+--
+#0 C:\xampp\htdocs\endpoint\application\themes\default\views\wrapper.php(9): Kohana_Core::error_handler(2, 'Illegal string ...', 'C:\xampp\htdocs...', 9, Array)
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\view.php(61): include('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\endpoint\system\classes\kohana\view.php(343): Kohana_View::capture('C:\xampp\htdocs...', Array)
+#3 C:\xampp\htdocs\endpoint\system\classes\kohana\controller\template.php(44): Kohana_View->render()
+#4 C:\xampp\htdocs\endpoint\modules\annex\classes\controller\public.php(34): Kohana_Controller_Template->after()
+#5 [internal function]: Controller_Public->after()
+#6 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client\internal.php(121): ReflectionMethod->invoke(Object(Controller_Public_Site))
+#7 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#8 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#9 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#10 {main}
+2012-07-28 19:54:46 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected '?>' ~ APPPATH\themes\default\views\wrapper.php [ 9 ]
+2012-07-28 19:54:46 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected '?>' ~ APPPATH\themes\default\views\wrapper.php [ 9 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2012-07-28 19:55:41 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected '?>' ~ APPPATH\themes\default\views\wrapper.php [ 9 ]
+2012-07-28 19:55:41 --- STRACE: ErrorException [ 4 ]: syntax error, unexpected '?>' ~ APPPATH\themes\default\views\wrapper.php [ 9 ]
+--
+#0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main}
+2012-07-28 19:56:49 --- ERROR: ErrorException [ 8 ]: Undefined variable: disaster ~ APPPATH\themes\default\views\wrapper.php [ 92 ]
+2012-07-28 19:56:49 --- STRACE: ErrorException [ 8 ]: Undefined variable: disaster ~ APPPATH\themes\default\views\wrapper.php [ 92 ]
+--
+#0 C:\xampp\htdocs\endpoint\application\themes\default\views\wrapper.php(92): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\xampp\htdocs...', 92, Array)
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\view.php(61): include('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\endpoint\system\classes\kohana\view.php(343): Kohana_View::capture('C:\xampp\htdocs...', Array)
+#3 C:\xampp\htdocs\endpoint\system\classes\kohana\controller\template.php(44): Kohana_View->render()
+#4 C:\xampp\htdocs\endpoint\modules\annex\classes\controller\public.php(34): Kohana_Controller_Template->after()
+#5 [internal function]: Controller_Public->after()
+#6 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client\internal.php(121): ReflectionMethod->invoke(Object(Controller_Public_Site))
+#7 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#8 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#9 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#10 {main}
