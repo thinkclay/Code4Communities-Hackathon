@@ -1,257 +1,11 @@
 var placeTypes = ['atm','restaurant','bank'];
 
-
-orderPoints = function() {
-	headings = [];
-	for (i=0; i<points.raw.length; i++)
-	{
-		headings.push(Math.ceil(google.maps.geometry.spherical.computeHeading(homeLocation ,points.raw[i])));	
-	}
-	orderedPoints = [];
-	for (i=0; i<181; i++)
-	{
-		for (y=0; y<headings.length; y++)
-		{
-			if (i == headings[y])
-			{
-				orderedPoints.push(points.raw[y])
-			}
-		}
-	}
-	for (i=(-180); i<0; i++)
-	{
-		for (y=0; y<headings.length; y++)
-		{
-			if (i == headings[y])
-			{
-				orderedPoints.push(points.raw[y])
-			}
-		}
-	}
-	points.raw = orderedPoints;
-	points.clean = [];
-	for ( i=0; i<points.raw.length; i++ )
-		points.clean.push([ points.raw[i].lat(), points.raw[i].lng() ]);
-	
-	}
-
 $(function(){
 	points = { count: 0, raw: [], clean: [] };
 	$map = $('#map');
 	$go = $('<a id="go" href="/browse?search=true"><span class="hidden">View Listings</span><span id="count"></span></a>');
 	first_click = false;
 });
-
-function clear () 
-{
-	points.count = 0;
-	points.raw = []; 
-	points.clean = [];
-	$map.gmap3({ action: 'clear' });
-	$go.remove();
-}
-
-function draw(marker, loc, data, action) 
-{	
-	if ( action == 'add' ) 
-	{ 
-		points.raw.push(loc.latLng);
-		points.clean.push([loc.latLng.lat(), loc.latLng.lng()]);
-		points.count = parseInt(points.count + 1);
-		draw(null, null, null, 'update');
-	}
-	
-	else if ( action == 'update' ) 
-	{
-		$map.gmap3({ action: 'clear', name: 'marker' });
-		
-		for ( i=0; i<points.raw.length; i++ ) {
-			var a = new google.maps.Point(-100,0) 
-			$map.gmap3({ 
-				action	: 'addMarker', 
-				latLng	: points.raw[i],
-				options	: { anchor: a, draggable: true, icon: '/media/img/map-handle.png', zIndex: 333 },
-				tag		: 'point-'+i,
-				events	: {
-					dragstart: function (sender) {
-						draw(sender, null, null, 'remove');
-					},
-					dragend: function (sender, loc) {
-						draw(null, loc, null, 'add');
-					}   
-				}
-			});
-		}
-	}
-	
-	else if ( action == 'remove' ) {
-		var mark = [marker.position.lat(), marker.position.lng()];
-
-		for (i=0; i<points.clean.length; i++) {
-			var raw = [points.raw[i].lat(), points.raw[i].lng()];
-			
-			if (mark.toString() == points.clean[i].toString()) 
-				points.clean.splice(i,1);
-
-			if (mark.toString() == raw.toString())
-				points.raw.splice(i,1);
-		}
-	}
-	orderPoints();
-	$map.gmap3(
-		{ action: 'clear', name: 'polygon' },
-		{
-			action	: 'addPolygon',
-			options	: {
-				strokeWeight	: 2,
-				fillColor		: '#000000',
-				strokeColor		: '#000000'
-			},
-			paths	: points.raw,
-			events	: { click: function () { /*$go.click();*/ } }
-		}
-	);
-}
-
-function map_init(type, callback)
-{
-	if (type == 'geo')
-	{
-		if (navigator.geolocation) 
-		{		
-			navigator.geolocation.getCurrentPosition(
-				// On Success
-				function (position) 
-				{
-					homeLocation = new google.maps.LatLng(position.coords['latitude'],position.coords['longitude']);	 			
-					$map.gmap3(
-						{ 
-							action		: 'geoLatlng', 
-							callback	: function (loc) { 								
-								$map.gmap3(
-									{
-										action	: 'init',
-										events	: { 
-											center_changed: function( map){
-												homeLocation = map.getCenter()
-											},
-											click: function (marker, event, data) { 
-												if ( first_click == false ) {
-													first_click = true;
-													clear();
-												}
-												draw(marker, event, data, 'add'); 
-											} 
-										},
-									},
-									{
-										action	: 'addMarker',
-										latLng	: loc,
-										map		: { center: true, zoom: 14 },
-										callback: function () {
-											points.raw.push(new google.maps.geometry.spherical.computeOffset(loc, 1200, 30));
-											points.raw.push(new google.maps.geometry.spherical.computeOffset(loc, 1500, 90));
-											points.raw.push(new google.maps.geometry.spherical.computeOffset(loc, 1500, 190));
-											points.raw.push(new google.maps.geometry.spherical.computeOffset(loc, 1500, 250));
-											points.raw.push(new google.maps.geometry.spherical.computeOffset(loc, 1500, 300));
-											//orderPoints();
-											for ( i=0; i<points.raw.length; i++ )
-												points.clean.push([ points.raw[i].lat(), points.raw[i].lng() ]);
-											draw(null, null, null, 'update');
-											callback.call();
-											
-										}
-									}
-								) 
-							} 
-						}
-					);
-				},
-				
-				// On Error
-				function () 
-				{	
-					$map.gmap3({ action: 'addMarker', address: "Denver, CO", map: { center: true, zoom: 14 } });
-					$('#address').focus();
-				}
-			);
-		} 
-		else 
-		{
-			$map.gmap3({ action: 'addMarker', address: "Denver, CO", map: { center: true, zoom: 14 } });
-			$('#address').focus();
-		}
-	} // end: if type geo
-	else if (type == 'set')
-	{
-		$map.gmap3(
-			{ 
-				action		: 'geoLatlng', 
-				callback	: function () { 
-					$map.gmap3(
-						{
-							action	: 'init',
-							events	: { 
-								click: function (marker, event, data) { 
-									if ( first_click == false ) {
-										first_click = true;
-										clear();
-									}
-									draw(marker, event, data, 'add'); 
-								} 
-							},
-							options	: { styles: gmap_styles }
-						},
-						{
-							action	: 'addMarker',
-							latLng	: [latitude, longitude],
-							map		: { center: true, zoom: 14 },
-							callback: function (marker) {
-								points.raw.push(new google.maps.geometry.spherical.computeOffset(marker.position, 1200, 30));
-								points.raw.push(new google.maps.geometry.spherical.computeOffset(marker.position, 1500, 90));
-								points.raw.push(new google.maps.geometry.spherical.computeOffset(marker.position, 1500, 190));
-								points.raw.push(new google.maps.geometry.spherical.computeOffset(marker.position, 1500, 250));
-								points.raw.push(new google.maps.geometry.spherical.computeOffset(marker.position, 1500, 300));
-								
-								for ( i=0; i<points.raw.length; i++ )
-									points.clean.push([ points.raw[i].lat(), points.raw[i].lng() ]);
-									
-								draw(null, null, null, 'add');
-								
-								callback.call();
-								
-							}
-						}
-					) 
-				} 
-			}
-		);
-	} 
-	else
-	{
-		$map.gmap3(
-			{ 
-				action		: 'geoLatlng', 
-				callback	: function () { 
-					$map.gmap3(
-						{
-							action	: 'init',
-							options	: { styles: gmap_styles }
-						}, 
-						{
-							action	: 'addMarker',
-							latLng	: [latitude, longitude],
-							map		: { center: true, zoom: 14 },
-							callback: function (marker) {
-								callback.call();
-							}
-						}
-					) 
-				} 
-			}
-		);	
-	}
-}
 
 function get_crime () 
 {
@@ -350,13 +104,15 @@ function get_parks ()
 					
 					for ( i=0; i<result.length; i++ ) 
 					{
-						if ( typeof result[i].latitude !== 'null' && typeof result[i].longitude !== 'null' )
+						if ( typeof result[i].latitude != '' && typeof result[i].longitude != 'null' )
 						{
 							data[i] = {};
 							data[i].data = result[i];
 							data[i].lat = result[i].latitude;
 							data[i].lng = result[i].longitude;
 							
+							if ( result[i].latitude === '' )
+							console.log(result[i].latitude);
 							console.log('point: '+result[i].latitude+', '+result[i].longitude);
 						}
 					}
@@ -436,6 +192,7 @@ function get_attractions() {
 				var region = tmpData.split(' ')[0];
 				address[0] = city;
 				address[1] = region;
+				
 				// get the schools from our  GreaterSchools api factory
 				$.ajax({
 					type	: 'GET',
@@ -547,15 +304,10 @@ function get_attractions() {
 
 
 $(function () {	
-	map_init(
-		'geo',
-		function () {
-			// put defaults here at some point
-		}
-	);
+	$map.gmap3({ action: 'addMarker', address: "Denver, CO", map: { center: true, zoom: 14 } });
 
 
-	$('#address').autocomplete({
+	$('#search').autocomplete({
 		position: { my : "right bottom", at: "right top" },
 
 		// This bit uses the geocoder to fetch address values

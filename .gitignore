@@ -3,10 +3,8 @@
 .htaccess
 .project
 .settings
-resources/media/uploads
-resources/tmp
 google*
 robots.txt
 modules/cache
-resources/cache
-resources/styles/cache
+application/cache
+application/logs
