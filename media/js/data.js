@@ -104,19 +104,11 @@ function get_parks ()
 					
 					for ( i=0; i<result.length; i++ ) 
 					{
-						if ( typeof result[i].latitude != '' && typeof result[i].longitude != 'null' )
-						{
-							data[i] = {};
-							data[i].data = result[i];
-							data[i].lat = result[i].latitude;
-							data[i].lng = result[i].longitude;
-							
-							if ( result[i].latitude === '' )
-							console.log(result[i].latitude);
-							console.log('point: '+result[i].latitude+', '+result[i].longitude);
-						}
+						data[i] = {};
+						data[i].data = result[i];
+						data[i].lat = result[i].geo_lat;
+						data[i].lng = result[i].geo_lon;
 					}
-					
 					
 					$map.gmap3({ 
 						action	: 'addMarkers',
@@ -131,14 +123,14 @@ function get_parks ()
 							}
 						},
 						marker	: {
-							options	: { icon: '/media/img/map-icon-crime.png', zIndex: 555 },
+							options	: { icon: '/media/img/map-icon-tree.png', zIndex: 555 },
 							events	: {  
 				                mouseover: function(marker, event, data){
 				                  $(this).gmap3(
 				                    { action:'clear', name:'overlay'},
 				                    { action:'addOverlay',
 				                      latLng: marker.getPosition(),
-				                      content:  '<div class="infobullet">' +
+				                      content:  '<div class="infobullet parks">' +
 				                                  '<div class="title">'+data.location+' / '+data.offense_category_id+'</div>'+
 				                                  '<div class="text">First Occurance: '+data.first_occurance_date+
 				                                  	'<br />Last Occurance: '+data.last_occurance_date+

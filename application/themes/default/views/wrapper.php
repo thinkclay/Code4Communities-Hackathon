@@ -14,9 +14,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		
 		<!-- STYLES -->
-		<link rel="stylesheet" href="/media/css/reveal.css">
-		<link rel="stylesheet" href="/media/css/stylesheet.css">
-	
+		<?php if(isset($styles)) foreach($styles as $file => $type){ echo HTML::style($file, array('media' => $type)), "\n"; } ?>
+		<?php if(isset($less)) echo Less::compile($less); ?>
 		
 		<!-- SCRIPTS -->
 		<?php if (isset($scripts)) foreach ($scripts as $file) { echo HTML::script($file, NULL, FALSE), "\n"; } ?>

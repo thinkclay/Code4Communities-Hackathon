@@ -8,3 +8,5 @@ robots.txt
 modules/cache
 application/cache
 application/logs
+application/logs/*
+public/cache/

@@ -21,15 +21,15 @@ abstract class Controller_Public extends Controller_Template
         
 		if ($this->auto_render)
 		{
-			// $dir = Request::$current->directory();
-			// $controller = Request::$current->controller();
-			// $action = Request::$current->action();
-// 			
-			// $this->template->classes = array($dir, $controller, $action);
-// 			
-			// $this->template->less = array();
-			// $this->template->styles =  array();
+			$dir = Request::$current->directory();
+			$controller = Request::$current->controller();
+			$action = Request::$current->action();
+
+			$this->template->classes = array($dir, $controller, $action);
+
 			$this->template->scripts = array();
+			$this->template->less = array();
+			$this->template->styles =  array();
 			
 			// Load our default wrappers to the view, but do it on before so that the controller->action can override
 			$this->template->bind_global('user', self::$user);
