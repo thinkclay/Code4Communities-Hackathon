@@ -205,7 +205,7 @@ function get_bus_routes (on)
 					markers	: data,
 					clusters: {
 						0: {
-							content: '<div class="cluster cluster-small parks">CLUSTER_COUNT</div>',
+							content: '<div class="cluster cluster-small bus">CLUSTER_COUNT</div>',
 							width: 35,
 							height: 39
 						}
@@ -218,12 +218,12 @@ function get_bus_routes (on)
 			                    { action:'clear', name:'overlay'},
 			                    { action:'addOverlay',
 			                      latLng: marker.getPosition(),
-			                      content:  '<div class="infobullet parks">' +
-			                                  '<div class="title">'+data.name+' / '+Math.round(data.gis_acres)+' acres</div>'+
-			                                  '<div class="text"><strong>Designated</strong>: '+data.designated+
-			                                  	'<br /><strong>Park Type</strong>: '+data.park_type+
-			                                  	'<br /><strong>Park Class</strong>: '+data.park_class+
-			                                  	'<br /><strong>Facilities</strong>: '+data.facilities+
+			                      content:  '<div class="infobullet bus">' +
+			                                  '<div class="title">'+data.stopname+'</div>'+
+			                                  '<div class="text">'+
+			                                  	'<strong>Direction</strong>: '+data.direction+
+			                                  	'<br /><strong>Routes</strong>: '+data.routes+
+			                                  	'<br /><strong>Bus ID</strong>: '+data.bsid+
 			                                  '</div>' +
 			                                '</div>',
 			                      offset: {
