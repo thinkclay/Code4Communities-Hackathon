@@ -468,7 +468,7 @@ header {
 #sidebar {
 	position: relative;
 	display: inline-block;
-	width: 13%;
+	width: 15%;
 	margin: 0;
 	padding: 0;
 	color: #424242;
@@ -540,11 +540,11 @@ header {
 			Map
 
 -----------------------------------------------------------------------------*/
-#map {
-	position: relative;
+#map-container {
+position: relative;
 	display: inline-block;
 	min-width: 60%;
-	width: 86%;
+	width: 84%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -553,13 +553,81 @@ header {
 	vertical-align: top;
 	z-index: 50;
 	border: 8px solid #ffffff;
-	box-sizing: border-box; /* Opera/IE 8+ */
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
+	#drawing {
+		border: 1px solid #BEA280;
+		box-shadow: inset 0 0 2em rgba(0,0,0,0.5);
+		height: 100%;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	#map {
+		height: 100%;
+		position: relative;
+		width: 100%;
+		z-index: 1;
+	}
+
+.cluster {
+  color:#ffffff;
+  font-size:11px;
+  line-height:19px;
+  text-align:center;
+  z-index:666;
+}
+.cluster-small {
+  background:url('/resources/images/icons/map/marker-blue-small.png') no-repeat top left;
+  height:32px;
+  width:20px;
+}
+.infobulle {
+  overflow:hidden;
+  cursor:default;
+  clear:both;
+  position:relative;
+  padding:0pt;
+  background-color:#393939;
+  border-radius:4px 4px;
+  -moz-border-radius:4px 4px;
+  -webkit-border-radius:4px 4px;
+  border:1px solid #2c2c2c;
+}
+.infobulle .bg {
+  font-size:1px;
+  height:16px;
+  border:0px;
+  width:100%;
+  padding:0px;
+  margin:0px;
+  background-color:#5e5e5e;
+}
+.infobulle .text {
+  color:#ffffff;
+  font-family:Verdana;
+  font-size:11px;
+  font-weight:bold;
+  line-height:25px;
+  padding:4px 20px;
+  text-shadow:0 -1px 0 #000000;
+  white-space:nowrap;
+  margin-top:-17px;
+}
+.infobulle.drive .text {
+  background:url(images/drive.png) no-repeat 2px center;
+  padding:4px 20px 4px 36px;
+}
+
+
 .infowindow > .description {
 	margin: 10px;
 }

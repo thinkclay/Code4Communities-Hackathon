@@ -21,18 +21,6 @@
 		<!-- SCRIPTS -->
 		<?php if (isset($scripts)) foreach ($scripts as $file) { echo HTML::script($file, NULL, FALSE), "\n"; } ?>
 		
-		<?php //if (isset($head)) echo $head; ?>
-		<script src="/media/js/libs/jquery.form.js"></script>
-		<script type="text/javascript" src=""></script>
-		<script src="/media/js/libs/jquery.reveal.js"></script>
-		<script src="/media/js/plugins.js"></script>
-		<script src="/media/js/script.js"></script>
-		<script>
-		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g,s)}(document,'script'));
-		</script>
 
 		<!-- LOOK AT THIS LATER -->
 		<?php /*
@@ -170,7 +158,12 @@
 				<li><a href="#">Things</a></li>
 			</ul>
 		</aside><!-- end #sidebar -->
-		<div id="map"></div>
+		
+		<div id="map-container">
+				<div id="drawing"></div>
+				<div id="map"></div>
+			</div>
+		
 		<!-- Modal Box -->
 		<div id="offerReliefBox" class="reveal-modal">
 			<form action="./offer" method="post">
