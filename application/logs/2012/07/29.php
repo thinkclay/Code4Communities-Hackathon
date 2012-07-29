@@ -1551,3 +1551,278 @@
 --
 #0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
 #1 {main}
+2012-07-29 11:36:34 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:36:34 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:36:34 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:36:34 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:36:34 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:36:34 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:36:35 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:36:35 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:36:53 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:36:53 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:36:53 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:36:53 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:36:53 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:36:53 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:36:54 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:36:54 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:09 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:09 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:09 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:09 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:09 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:09 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:09 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:09 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:42 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:42 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:42 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:42 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:42 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:42 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:43 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:43 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:56 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:56 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:56 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:56 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:56 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:56 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:37:57 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:37:57 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:39:00 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:39:00 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:39:10 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:39:10 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:39:10 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:39:10 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:39:10 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:39:10 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:39:11 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:39:11 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:44:58 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:44:58 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:44:58 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:44:58 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:44:58 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:44:58 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:44:59 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:44:59 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:45:26 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:45:26 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:45:28 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:45:28 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:45:30 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:45:30 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:45:34 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:45:34 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:45:36 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:45:36 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:47:40 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:47:40 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:47:40 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:47:40 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:47:40 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:47:40 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:47:41 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:47:41 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:50:47 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:50:47 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:50:47 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:50:47 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:50:47 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:50:47 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 11:50:47 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 11:50:47 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:03:12 --- ERROR: Exception [ 0 ]: parse error: failed at `background-color: #d9d9d9 \9;` public/cache/2d01500145e59cda30e2885cee4823a4-1343584274.css on line 829 ~ MODPATH/annex/submodules/less/lib/lessc.inc.php [ 1730 ]
+2012-07-29 12:03:12 --- STRACE: Exception [ 0 ]: parse error: failed at `background-color: #d9d9d9 \9;` public/cache/2d01500145e59cda30e2885cee4823a4-1343584274.css on line 829 ~ MODPATH/annex/submodules/less/lib/lessc.inc.php [ 1730 ]
+--
+#0 /Users/clay/Sites/Hackathon/modules/annex/submodules/less/lib/lessc.inc.php(1683): lessc->throwParseError()
+#1 /Users/clay/Sites/Hackathon/modules/annex/submodules/less/lib/lessc.inc.php(1713): lessc->parseTree(NULL)
+#2 /Users/clay/Sites/Hackathon/modules/annex/submodules/less/classes/less/core.php(187): lessc->parse()
+#3 /Users/clay/Sites/Hackathon/modules/annex/submodules/less/classes/less/core.php(173): Less_Core::_compile('public/cache/2d...')
+#4 /Users/clay/Sites/Hackathon/modules/annex/submodules/less/classes/less/core.php(143): Less_Core::_generate_assets('public/cache/2d...', Array)
+#5 /Users/clay/Sites/Hackathon/modules/annex/submodules/less/classes/less/core.php(59): Less_Core::_combine(Array)
+#6 /Users/clay/Sites/Hackathon/application/themes/default/views/wrapper.php(18): Less_Core::compile(Array)
+#7 /Users/clay/Sites/Hackathon/system/classes/kohana/view.php(61): include('/Users/clay/Sit...')
+#8 /Users/clay/Sites/Hackathon/system/classes/kohana/view.php(343): Kohana_View::capture('/Users/clay/Sit...', Array)
+#9 /Users/clay/Sites/Hackathon/system/classes/kohana/controller/template.php(44): Kohana_View->render()
+#10 /Users/clay/Sites/Hackathon/modules/annex/classes/controller/public.php(44): Kohana_Controller_Template->after()
+#11 [internal function]: Controller_Public->after()
+#12 /Users/clay/Sites/Hackathon/system/classes/kohana/request/client/internal.php(121): ReflectionMethod->invoke(Object(Controller_Public_Site))
+#13 /Users/clay/Sites/Hackathon/system/classes/kohana/request/client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#14 /Users/clay/Sites/Hackathon/system/classes/kohana/request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#15 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#16 {main}
+2012-07-29 12:03:13 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 12:03:13 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:03:15 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 12:03:15 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:03:15 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 12:03:15 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:03:15 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 12:03:15 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:03:16 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 12:03:16 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:04:43 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 12:04:43 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:04:43 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 12:04:43 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:04:43 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 12:04:43 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:04:44 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+2012-07-29 12:04:44 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: favicon.ico ~ SYSPATH/classes/kohana/request.php [ 1126 ]
+--
+#0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
+#1 {main}

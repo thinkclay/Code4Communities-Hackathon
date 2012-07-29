@@ -7,163 +7,251 @@ $(function(){
 	first_click = false;
 });
 
-function get_crime () 
+function get_crime (on) 
 {
+	if ( on === false )
+	{
+		$map.gmap3({ action: 'clear', tag: 'crime' });
+		return;
+	}
 	
-	$map.gmap3({ action: 'clear', tag: 'crime' });
-	
-		geoRequest = $.ajax({
-			type	: 'GET',
-			data	: { 
-				token: '287475de3e36adb61c1a3efc124e906ab0abae153a0daa157fa538cdb1cd90ca',
-				limit: 1500
-			},
-			url		:'/api/stats/crime',
-			success	: function (result) {
+	geoRequest = $.ajax({
+		type	: 'GET',
+		data	: { 
+			token: '287475de3e36adb61c1a3efc124e906ab0abae153a0daa157fa538cdb1cd90ca',
+			limit: 1500
+		},
+		url		:'/api/stats/crime',
+		success	: function (result) {
 
-				if ( result.length >= 1 ) 
+			if ( result.length >= 1 ) 
+			{
+				data = [];
+				
+				for ( i=0; i<result.length; i++ ) 
 				{
-					data = [];
-					
-					for ( i=0; i<result.length; i++ ) 
-					{
-						data[i] = {};
-						data[i].data = result[i];
-						data[i].lat = result[i].geo_lat;
-						data[i].lng = result[i].geo_lon;
-					}
-					
-					$map.gmap3({ 
-						action	: 'addMarkers',
-						tag     : 'crime',
-						radius	: 20,
-						markers	: data,
-						clusters: {
-							0: {
-								content: '<div class="cluster cluster-small">CLUSTER_COUNT</div>',
-								width: 35,
-								height: 39
-							}
-						},
-						marker	: {
-							options	: { icon: '/media/img/map-icon-crime.png', zIndex: 555 },
-							events	: {  
-				                mouseover: function(marker, event, data){
-				                  $(this).gmap3(
-				                    { action:'clear', name:'overlay'},
-				                    { action:'addOverlay',
-				                      latLng: marker.getPosition(),
-				                      content:  '<div class="infobullet">' +
-				                                  '<div class="title">'+data.offense_type_id+' / '+data.offense_category_id+'</div>'+
-				                                  '<div class="text">First Occurance: '+data.first_occurance_date+
-				                                  	'<br />Last Occurance: '+data.last_occurance_date+
-				                                  	'<br />Incident Address: '+data.incident_address+
-				                                  	'<br />Neighborhood: '+data.neighborhood_id+
-				                                  '</div>' +
-				                                '</div>',
-				                      offset: {
-				                        x:-46,
-				                        y:-98
-				                      }
-				                    }
-				                  );
-				                },
-				                mouseout: function(){
-				                  $(this).gmap3({action:'clear', name:'overlay'});
-								},
-								click: function(marker, event, data){
-									window.location = '/browse/detail/'+data.listing_num;
-								}
+					data[i] = {};
+					data[i].data = result[i];
+					data[i].lat = result[i].geo_lat;
+					data[i].lng = result[i].geo_lon;
+				}
+				
+				$map.gmap3({ 
+					action	: 'addMarkers',
+					tag     : 'crime',
+					radius	: 20,
+					markers	: data,
+					clusters: {
+						0: {
+							content: '<div class="cluster cluster-small">CLUSTER_COUNT</div>',
+							width: 35,
+							height: 39
+						}
+					},
+					marker	: {
+						options	: { icon: '/media/img/map-icon-crime.png', zIndex: 555 },
+						events	: {  
+			                mouseover: function(marker, event, data){
+			                  $(this).gmap3(
+			                    { action:'clear', name:'overlay'},
+			                    { action:'addOverlay',
+			                      latLng: marker.getPosition(),
+			                      content:  '<div class="infobullet">' +
+			                                  '<div class="title">'+data.offense_type_id+' / '+data.offense_category_id+'</div>'+
+			                                  '<div class="text">First Occurance: '+data.first_occurance_date+
+			                                  	'<br />Last Occurance: '+data.last_occurance_date+
+			                                  	'<br />Incident Address: '+data.incident_address+
+			                                  	'<br />Neighborhood: '+data.neighborhood_id+
+			                                  '</div>' +
+			                                '</div>',
+			                      offset: {
+			                        x:-46,
+			                        y:-98
+			                      }
+			                    }
+			                  );
+			                },
+			                mouseout: function(){
+			                  $(this).gmap3({action:'clear', name:'overlay'});
+							},
+							click: function(marker, event, data){
+								window.location = '/browse/detail/'+data.listing_num;
 							}
 						}
-					});	
-				}
-			},
-			error	: function (data) {
-				if (typeof console == 'object')
-					console.log('ajax error');
+					}
+				});	
 			}
-		});
+		},
+		error	: function (data) {
+			if (typeof console == 'object')
+				console.log('ajax error');
+		}
+	});
 }
 
-function get_parks () 
+function get_parks (on) 
 {
-	$map.gmap3({ action: 'clear', tag: 'parks' });
+	if ( on === false )
+	{
+		$map.gmap3({ action: 'clear', tag: 'parks' });
+		return;
+	}
 	
-		geoRequest = $.ajax({
-			type	: 'GET',
-			data	: { 
-				token: '287475de3e36adb61c1a3efc124e906ab0abae153a0daa157fa538cdb1cd90ca',
-				limit: 1500
-			},
-			url		: '/api/locations/recreation/parks',
-			success	: function (result) {
-				if ( result.length >= 1 ) 
+	geoRequest = $.ajax({
+		type	: 'GET',
+		data	: { 
+			token: '287475de3e36adb61c1a3efc124e906ab0abae153a0daa157fa538cdb1cd90ca',
+			limit: 1500
+		},
+		url		: '/api/locations/recreation/parks',
+		success	: function (result) {
+			if ( result.length >= 1 ) 
+			{
+				data = [];
+				
+				for ( i=0; i<result.length; i++ ) 
 				{
-					data = [];
-					
-					for ( i=0; i<result.length; i++ ) 
-					{
-						data[i] = {};
-						data[i].data = result[i];
-						data[i].lat = result[i].geo_lat;
-						data[i].lng = result[i].geo_lon;
-					}
-					
-					$map.gmap3({ 
-						action	: 'addMarkers',
-						tag     : 'parks',
-						radius	: 20,
-						markers	: data,
-						clusters: {
-							0: {
-								content: '<div class="cluster cluster-small parks">CLUSTER_COUNT</div>',
-								width: 35,
-								height: 39
-							}
-						},
-						marker	: {
-							options	: { icon: '/media/img/map-icon-tree.png', zIndex: 555 },
-							events	: {  
-				                mouseover: function(marker, event, data){
-				                  $(this).gmap3(
-				                    { action:'clear', name:'overlay'},
-				                    { action:'addOverlay',
-				                      latLng: marker.getPosition(),
-				                      content:  '<div class="infobullet parks">' +
-				                                  '<div class="title">'+data.location+' / '+data.offense_category_id+'</div>'+
-				                                  '<div class="text">First Occurance: '+data.first_occurance_date+
-				                                  	'<br />Last Occurance: '+data.last_occurance_date+
-				                                  	'<br />Incident Address: '+data.incident_address+
-				                                  	'<br />Neighborhood: '+data.neighborhood_id+
-				                                  '</div>' +
-				                                '</div>',
-				                      offset: {
-				                        x:-46,
-				                        y:-98
-				                      }
-				                    }
-				                  );
-				                },
-				                mouseout: function(){
-				                  $(this).gmap3({action:'clear', name:'overlay'});
-								},
-								click: function(marker, event, data){
-									window.location = '/browse/detail/'+data.listing_num;
-								}
+					data[i] = {};
+					data[i].data = result[i];
+					data[i].lat = result[i].geo_lat;
+					data[i].lng = result[i].geo_lon;
+				}
+				
+				$map.gmap3({ 
+					action	: 'addMarkers',
+					tag     : 'parks',
+					radius	: 20,
+					markers	: data,
+					clusters: {
+						0: {
+							content: '<div class="cluster cluster-small parks">CLUSTER_COUNT</div>',
+							width: 35,
+							height: 39
+						}
+					},
+					marker	: {
+						options	: { icon: '/media/img/map-icon-tree.png', zIndex: 555 },
+						events	: {  
+			                mouseover: function(marker, event, data){
+			                  $(this).gmap3(
+			                    { action:'clear', name:'overlay'},
+			                    { action:'addOverlay',
+			                      latLng: marker.getPosition(),
+			                      content:  '<div class="infobullet parks">' +
+			                                  '<div class="title">'+data.name+' / '+Math.round(data.gis_acres)+' acres</div>'+
+			                                  '<div class="text"><strong>Designated</strong>: '+data.designated+
+			                                  	'<br /><strong>Park Type</strong>: '+data.park_type+
+			                                  	'<br /><strong>Park Class</strong>: '+data.park_class+
+			                                  	'<br /><strong>Facilities</strong>: '+data.facilities+
+			                                  '</div>' +
+			                                '</div>',
+			                      offset: {
+			                        x:-46,
+			                        y:-98
+			                      }
+			                    }
+			                  );
+			                },
+			                mouseout: function(){
+			                  $(this).gmap3({action:'clear', name:'overlay'});
+							},
+							click: function(marker, event, data){
+								window.location = '/browse/detail/'+data.listing_num;
 							}
 						}
-					});	
-				}
-			},
-			error	: function (data) {
-				if (typeof console == 'object')
-					console.log('ajax error');
+					}
+				});	
 			}
-		});
+		},
+		error	: function (data) {
+			if (typeof console == 'object')
+				console.log('ajax error');
+		}
+	});
 }
 
-function get_attractions() {
+function get_bus_routes (on) 
+{
+	if ( on === false )
+	{
+		$map.gmap3({ action: 'clear', tag: 'bus' });
+		return;
+	}
+	
+	geoRequest = $.ajax({
+		type	: 'GET',
+		data	: { 
+			token: '287475de3e36adb61c1a3efc124e906ab0abae153a0daa157fa538cdb1cd90ca',
+			limit: 1500
+		},
+		url		: '/api/transit/bus',
+		success	: function (result) {
+			if ( result.length >= 1 ) 
+			{
+				data = [];
+				
+				for ( i=0; i<result.length; i++ ) 
+				{
+					data[i] = {};
+					data[i].data = result[i];
+					data[i].lat = result[i].geo_lat;
+					data[i].lng = result[i].geo_lon;
+				}
+				
+				$map.gmap3({ 
+					action	: 'addMarkers',
+					tag     : 'bus',
+					radius	: 20,
+					markers	: data,
+					clusters: {
+						0: {
+							content: '<div class="cluster cluster-small parks">CLUSTER_COUNT</div>',
+							width: 35,
+							height: 39
+						}
+					},
+					marker	: {
+						options	: { icon: '/media/img/map-icon-bus.png', zIndex: 555 },
+						events	: {  
+			                mouseover: function(marker, event, data){
+			                  $(this).gmap3(
+			                    { action:'clear', name:'overlay'},
+			                    { action:'addOverlay',
+			                      latLng: marker.getPosition(),
+			                      content:  '<div class="infobullet parks">' +
+			                                  '<div class="title">'+data.name+' / '+Math.round(data.gis_acres)+' acres</div>'+
+			                                  '<div class="text"><strong>Designated</strong>: '+data.designated+
+			                                  	'<br /><strong>Park Type</strong>: '+data.park_type+
+			                                  	'<br /><strong>Park Class</strong>: '+data.park_class+
+			                                  	'<br /><strong>Facilities</strong>: '+data.facilities+
+			                                  '</div>' +
+			                                '</div>',
+			                      offset: {
+			                        x:-46,
+			                        y:-98
+			                      }
+			                    }
+			                  );
+			                },
+			                mouseout: function(){
+			                  $(this).gmap3({action:'clear', name:'overlay'});
+							},
+							click: function(marker, event, data){
+								window.location = '/browse/detail/'+data.listing_num;
+							}
+						}
+					}
+				});	
+			}
+		},
+		error	: function (data) {
+			if (typeof console == 'object')
+				console.log('ajax error');
+		}
+	});
+}
+
+function get_attractions(on) {
 	pins = [{
 		lat 	: latitude,
 		lng 	: longitude,
@@ -403,19 +491,48 @@ $(function () {
 
 $(function(){
 	$('#sidebar li a').click(function() {
-		if ( $(this).hasClass('crime') )
+		var $this = $(this);
+		
+		if ( $this.hasClass('crime') )
 		{
-			get_crime();
+			if ( ! $this.hasClass('on') )
+			{		
+				$this.addClass('on');
+				get_crime(true);
+			}
+			else
+			{
+				$this.removeClass('on');
+				get_crime(false);
+			}
 		}
 		
-		if ( $(this).hasClass('parks') )
+		if ( $this.hasClass('parks') )
 		{
-			get_parks();
+			if ( ! $this.hasClass('on') )
+			{		
+				$this.addClass('on');
+				get_parks(true);
+			}
+			else
+			{
+				$this.removeClass('on');
+				get_parks(false);
+			}
 		}
-		
-		if ( $(this).hasClass('schools') )
+
+		if ( $this.hasClass('transport') )
 		{
-			get_attractions();
+			if ( ! $this.hasClass('on') )
+			{		
+				$this.addClass('on');
+				get_bus_routes(true);
+			}
+			else
+			{
+				$this.removeClass('on');
+				get_bus_routes(false);
+			}
 		}
 		
 		return false;
