@@ -2,48 +2,28 @@
 <html lang="en-US">
 	<head>
 		<title><?php echo (isset($title)) ? $title : 'Endpoint'; ?></title>
-
-
-		<!-- META -->
-		<?php //if (isset($fbproperty)) : ?>
-		<meta property="fb:app_id" content="<?//= $fbproperty['app_id']; ?>" /> 
-		<meta property="og:type" content="<?//= $fbproperty['type']; // qwizzle_users:property ?>" /> 
-		<meta property="og:url" content="http://<?//= $fbproperty['url']; ?>" /> 
-		<meta property="og:title" content="<?//= $fbproperty['address']; ?>" /> 
-		<meta property="og:description" content="<?//= $fbproperty['description']; ?>" /> 
-		<meta property="og:image" content="<?//= $fbproperty['img_link']; ?>" />
-		}
-		<?php //endif; ?>
+		
 		<meta charset="utf-8">
-		<?php //echo View::factory('blocks/meta/facebook')->bind('fbproperty', $fbproperty); ?>
+		
+		<?php 
+		if (isset($fbproperty))
+			echo View::factory('blocks/meta/facebook')->bind('fbproperty', $fbproperty); 
+		?>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<?php //if(isset($description)): ?><meta name="description" content="<?php //echo $description?>" /><?php //endif; ?>
-		<?php //if(isset($keywords)): ?><meta name="keywords" content="<?php //echo $keywords?>" /><?php //endif; ?>
 		
 		<!-- STYLES -->
-		<?php //if(isset($styles)) foreach($styles as $file => $type){ echo HTML::style($file, array('media' => $type)), "\n"; } ?>
-		<?php //if(isset($less)) echo Less::compile($less); ?>
 		<link rel="stylesheet" href="/media/css/reveal.css">
 		<link rel="stylesheet" href="/media/css/stylesheet.css">
 	
-		<!-- JS_VARS -->
-		<?php //if (isset($js_vars)) : ?>
-		<script type="text/javascript">
-		<?php //foreach ($js_vars as $key => $value) echo "var $key = '$value'; \r\n"; ?>
-		</script>
-		<?php //endif; ?>
 		
 		<!-- SCRIPTS -->
-		<?php //if (isset($scripts)) foreach ($scripts as $file) { echo HTML::script($file, NULL, FALSE), "\n"; } ?>
+		<?php if (isset($scripts)) foreach ($scripts as $file) { echo HTML::script($file, NULL, FALSE), "\n"; } ?>
 		
 		<?php //if (isset($head)) echo $head; ?>
-		<script type="text/javascript" src="/media/js/libs/modernizr-2.5.3.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="/media/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 		<script src="/media/js/libs/jquery.form.js"></script>
-		<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCgDq58XR1uUISSdIwoWKjZqNnxUGrIJO0&sensor=true"></script>
+		<script type="text/javascript" src=""></script>
 		<script src="/media/js/libs/jquery.reveal.js"></script>
 		<script src="/media/js/plugins.js"></script>
 		<script src="/media/js/script.js"></script>
@@ -69,9 +49,11 @@
 		// }
 		*/?>
 
-		<script type="text/javascript">
-			var disasters = <?php //echo json_encode( $disasters ); ?>;
-		</script>	
+		<?php if (isset($disasters)) : ?>
+		<script type="text/javascript">var disasters = <?php echo json_encode( $disasters ); ?>;</script>
+		<?php else : ?>
+		<script type="text/javascript">var disasters = null;</script>
+		<?php endif; ?>
 	</head>
 	
 	<body 

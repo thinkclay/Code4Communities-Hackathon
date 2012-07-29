@@ -6,11 +6,15 @@ class Controller_Public_Site extends Controller_Public
 	public function action_index()
 	{
 		$this->template->id = 'home';
-		$this->template->fbproperty = 'test';
-		$this->template->main->content = 'main content';
-		$this->template->footer->content = 'footer content';
 		
-		//require DOCROOT.'old/index.php';
+		$this->template->scripts[] = 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';
+		$this->template->scripts[] = 'http://maps.googleapis.com/maps/api/js?key=AIzaSyCgDq58XR1uUISSdIwoWKjZqNnxUGrIJO0&sensor=true';
+		$this->template->scripts[] = 'media/js/libs/modernizr-2.5.3.min.js';
+		$this->template->scripts[] = 'media/js/libs/jquery.form.js';
+		$this->template->scripts[] = 'media/js/libs/jquery.reveal.js';
+		$this->template->scripts[] = 'media/js/plugins.js';
+		$this->template->scripts[] = 'media/js/script.js';
+		$this->template->scripts[] = 'media/js/data.js';
 		
 		/*
 		$this->template->scripts[] = 'http://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false';
