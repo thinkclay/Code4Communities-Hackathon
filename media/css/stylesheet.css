@@ -14,7 +14,7 @@ html, body {
 	border: none;
 }
 body {
-	background: url("../img/lghtmesh.png");
+	background: url("/media/img/bg.png");
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 62.5%;
 	overflow: hidden;
@@ -469,7 +469,6 @@ header {
 	position: relative;
 	display: inline-block;
 	width: 13%;
-	height: 100%;
 	margin: 0;
 	padding: 0;
 	color: #424242;
@@ -478,6 +477,10 @@ header {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box; /* Firefox, other Gecko */
 }
+
+.zip_box { padding: 0px 25px; text-align: center; }
+.zip_box a { font-weight: bold; color: #1f3de3; }
+
 #sidebar > ul {
 	list-style-type: none;
 	margin: 0;
@@ -505,28 +508,31 @@ header {
 }
 
 .housing {
-	background: url( '../img/condominium.png' ) transparent no-repeat 4px center;
+ background: url( '/media/img/condominium.png' ) transparent no-repeat 4px center;
 }
-.food {
-	background: url( '../img/grocery.png' ) transparent no-repeat 4px center;
+.crime {
+ background: url( '/media/img/police.png' ) transparent no-repeat 4px center;
 }
-.goods {
-	background: url( '../img/departmentstore.png' ) transparent no-repeat 4px center;
+.demographic {
+ background: url( '/media/img/demographic.png' ) transparent no-repeat 4px center;
 }
-.medical {
-	background: url( '../img/firstaid.png' ) transparent no-repeat 4px center;
+.schools {
+ background: url( '/media/img/school.png' ) transparent no-repeat 4px center;
 }
 .transport {
-	background: url( '../img/truck3.png' ) transparent no-repeat 4px center;
+ background: url( '/media/img/bus.png' ) transparent no-repeat 4px center;
 }
-.services {
-	background: url( '../img/social.png' ) transparent no-repeat 4px center;
+.parks {
+ background: url( '/media/img/park.png' ) transparent no-repeat 4px center;
 }
-.animals {
-	background: url( '../img/pets.png' ) transparent no-repeat 4px center;
+.library {
+ background: url( '/media/img/library.png' ) transparent no-repeat 4px center;
 }
-.other {
-	background: url( '../img/other.png' ) transparent no-repeat 4px center;
+.interest {
+ background: url( '/media/img/interest.png' ) transparent no-repeat 4px center;
+}
+.public_service {
+ background: url( '/media/img/ems.png' ) transparent no-repeat 4px center;
 }
 
 /*---------------------------------------------------------------------------
@@ -575,7 +581,7 @@ header {
 
 -----------------------------------------------------------------------------*/
 .Housing_filter {
-	display: block;
+	display: none;
 	position: absolute;
 	top: 70px;
 	left: 13.5%;

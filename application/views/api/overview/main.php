@@ -21,7 +21,7 @@
 			Fort Collins to Colorado Springs and more. Further, we connect users to lenders and mortgage assistance programs 
 			and locations.
 		</p>
-		<p><a class="btn btn-primary" href="/api/docs/property">Get access to MLS, evolved &raquo;</a></p>
+<!-- 		<p><a class="btn btn-primary" href="/api/docs/property">Get access to MLS, evolved &raquo;</a></p> -->
 		<p>&nbsp;</p>
 	</div>
 	<!--/span-->
@@ -33,7 +33,7 @@
 			services. We can geolocate with polygon searches, and find points of interests ranging from parks to geocaching and
 			historical landmarks. 
 		</p>
-		<p><a class="btn btn-success" href="/api/docs/locations">Enhance your existing data &raquo;</a></p>
+<!-- 		<p><a class="btn btn-success" href="/api/docs/locations">Enhance your existing data &raquo;</a></p> -->
 	</div>
 	<!--/span-->
 	
@@ -44,9 +44,7 @@
 			lightrail, bus, carpooling, biking, and even skateboarding trails.. It's our goal to accomodate and map the
 			options for all.
 		</p>
-		<p>
-			<a class="btn btn-warning" href="/api/docs/transit">Educate users on transportation &raquo;</a>
-		</p>
+<!-- 		<p><a class="btn btn-warning" href="/api/docs/transit">Educate users on transportation &raquo;</a></p> -->
 	</div>
 	<!--/span-->
 
@@ -61,9 +59,7 @@
 			We aim to gather information that helps educate the public about 
 			neighborhoods and resources available around them or areas they are interested in moving to.
 		</p>
-		<p>
-			<a class="btn btn-inverse" href="/api/docs/stats/census">Big Brother is watching &raquo;</a>
-		</p>
+<!-- 		<p><a class="btn btn-inverse" href="/api/docs/stats/census">Big Brother is watching &raquo;</a></p> -->
 	</div><!--/span-->
 	<div class="span4">
 		<h2>Marketing Research</h2>
@@ -72,9 +68,7 @@
 			Our goal is to gather the information and let you build out the algorithms and analytical tools to 
 			disect any market as vague or granularly as needed. 
 		</p>
-		<p>
-			<a class="btn btn-danger" href="/api/docs/locations/stations">We're the memory, you're the brain &raquo;</a>
-		</p>
+<!-- 		<p><a class="btn btn-danger" href="/api/docs/locations/stations">We're the memory, you're the brain &raquo;</a></p> -->
 	</div><!--/span-->
 	<div class="span4">
 		<h2>Your great idea?</h2>

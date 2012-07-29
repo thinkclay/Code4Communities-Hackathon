@@ -3,44 +3,42 @@
 	<head>
 		<title><?php echo (isset($title)) ? $title : 'Endpoint'; ?></title>
 
-<<<<<<< HEAD
-		<!-- META -->
-		<?php if (isset($fbproperty)) : ?>
-		<meta property="fb:app_id" content="<?= $fbproperty['app_id']; ?>" /> 
-		<meta property="og:type" content="<?= $fbproperty['type']; // qwizzle_users:property ?>" /> 
-		<meta property="og:url" content="http://<?= $fbproperty['url']; ?>" /> 
-		<meta property="og:title" content="<?= $fbproperty['address']; ?>" /> 
-		<meta property="og:description" content="<?= $fbproperty['description']; ?>" /> 
-		<meta property="og:image" content="<?= $fbproperty['img_link']; ?>" />
-		}
-		<?php endif; ?>
-		<meta charset="utf-8">
-=======
-		<?php echo View::factory('blocks/meta/facebook')->bind('fbproperty', $fbproperty); ?>
 
->>>>>>> 09056b97d4f91096d0a394128d4a9733f93bb50a
+		<!-- META -->
+		<?php //if (isset($fbproperty)) : ?>
+		<meta property="fb:app_id" content="<?//= $fbproperty['app_id']; ?>" /> 
+		<meta property="og:type" content="<?//= $fbproperty['type']; // qwizzle_users:property ?>" /> 
+		<meta property="og:url" content="http://<?//= $fbproperty['url']; ?>" /> 
+		<meta property="og:title" content="<?//= $fbproperty['address']; ?>" /> 
+		<meta property="og:description" content="<?//= $fbproperty['description']; ?>" /> 
+		<meta property="og:image" content="<?//= $fbproperty['img_link']; ?>" />
+		}
+		<?php //endif; ?>
+		<meta charset="utf-8">
+		<?php //echo View::factory('blocks/meta/facebook')->bind('fbproperty', $fbproperty); ?>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<?php if(isset($description)): ?><meta name="description" content="<?php echo $description?>" /><?php endif; ?>
-		<?php if(isset($keywords)): ?><meta name="keywords" content="<?php echo $keywords?>" /><?php endif; ?>
+		<?php //if(isset($description)): ?><meta name="description" content="<?php //echo $description?>" /><?php //endif; ?>
+		<?php //if(isset($keywords)): ?><meta name="keywords" content="<?php //echo $keywords?>" /><?php //endif; ?>
 		
 		<!-- STYLES -->
-		<?php if(isset($styles)) foreach($styles as $file => $type){ echo HTML::style($file, array('media' => $type)), "\n"; } ?>
-		<?php if(isset($less)) echo Less::compile($less); ?>
+		<?php //if(isset($styles)) foreach($styles as $file => $type){ echo HTML::style($file, array('media' => $type)), "\n"; } ?>
+		<?php //if(isset($less)) echo Less::compile($less); ?>
 		<link rel="stylesheet" href="/media/css/reveal.css">
 		<link rel="stylesheet" href="/media/css/stylesheet.css">
 	
 		<!-- JS_VARS -->
-		<?php if (isset($js_vars)) : ?>
+		<?php //if (isset($js_vars)) : ?>
 		<script type="text/javascript">
-		<?php foreach ($js_vars as $key => $value) echo "var $key = '$value'; \r\n"; ?>
+		<?php //foreach ($js_vars as $key => $value) echo "var $key = '$value'; \r\n"; ?>
 		</script>
-		<?php endif; ?>
+		<?php //endif; ?>
 		
 		<!-- SCRIPTS -->
-		<?php if (isset($scripts)) foreach ($scripts as $file) { echo HTML::script($file, NULL, FALSE), "\n"; } ?>
+		<?php //if (isset($scripts)) foreach ($scripts as $file) { echo HTML::script($file, NULL, FALSE), "\n"; } ?>
 		
-		<?php if (isset($head)) echo $head; ?>
+		<?php //if (isset($head)) echo $head; ?>
 		<script type="text/javascript" src="/media/js/libs/modernizr-2.5.3.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="/media/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
@@ -72,13 +70,13 @@
 		*/?>
 
 		<script type="text/javascript">
-			// var disasters = <?php echo json_encode( $disasters ); ?>;
+			var disasters = <?php //echo json_encode( $disasters ); ?>;
 		</script>	
 	</head>
 	
 	<body 
-		id="<?php if (isset($id)) echo $id; ?>" 
-		class="<?php if (isset($classes)) foreach ($classes as $c) echo $c.' '; ?><?php if (isset($class)) echo $class; ?>"
+		id="<?php //if (isset($id)) echo $id; ?>" 
+		class="<?php //if (isset($classes)) foreach ($classes as $c) echo $c.' '; ?><?php //if (isset($class)) echo $class; ?>"
 	><!-- bracket for body -->
 
 	<header>
@@ -89,11 +87,11 @@
 					<ul class="dropdown_2columns">
 						<li><a href="#" class="world">Select Relief Effort</a></li>
 <?php
-foreach ( $disasters as $disaster ) {
+//foreach ( $disasters as $disaster ) {
 ?>
-						<li id="disaster-<?php echo $disaster->id; ?>"><a href="#" class="<?php echo $disaster_types[$disaster->type]; ?>"><?php echo $disaster->name; ?></a></li>
+						<li id="disaster-<?php //echo $disaster->id; ?>"><a href="#" class="<?php //echo $disaster_types[$disaster->type]; ?>"><?php //echo $disaster->name; ?></a></li>
 <?php
-}
+//}
 ?>
 					</ul>
 				</li>
@@ -105,14 +103,14 @@ foreach ( $disasters as $disaster ) {
 					<a href="#">welcome friend</a>
 					<div id="login-menu">
 <?php
-if ( isset( $user ) ) {
+//if ( isset( $user ) ) {
 ?>
 						<p>Thanks for being awesome!</p>
 						<div class="blue-button">
 							<input class="blue-button-inner" type="button" value="log out" onclick="location.href='./logout';" />
 						</div>
 <?php
-} else {
+//} else {
 ?>
 						<h2>Please login so you can:</h2>
 						<ul>
@@ -138,7 +136,7 @@ if ( isset( $user ) ) {
 						</form>
 						<span class="terms">I agree to the terms of use by signing in</span>
 <?php
-}
+//}
 ?>
 					</div>
 				</li>
@@ -149,15 +147,25 @@ if ( isset( $user ) ) {
 		<!--SideBar -->
 		<!-- The ones besides the default has display: none on them -->
 		<aside id="sidebar">
+			<div class="zip_box">
+				<h2>Your Zip Code</h2>
+			    
+				<form>
+					<input type="text" name="search" id="search" />
+				</form>
+			    
+				<a href="#">Change Zip</a>
+			</div>
 			<ul class="relief">
-				<li><a href="#" class="filterform housing">Housing</a></li>
-				<li><a href="#" class="food">Food</a></li>
-				<li><a href="#" class="goods">Goods</a></li>
-				<li><a href="#" class="medical">Medical</a></li>
-				<li><a href="#" class="transport">Transport</a></li>
-				<li><a href="#" class="services">Services</a></li>
-				<li><a href="#" class="animals">Animals</a></li>
-				<li><a href="#" class="other">Other</a></li>
+			    	<li><a href="#" class="filterform housing ">Housing</a></li>
+			    	<li><a href="#" class="crime ">Crime</a></li>
+			    	<li><a href="#" class="demographic ">Demographic</a></li>
+			    	<li><a href="#" class="schools ">Schools</a></li>
+			    	<li><a href="#" class="transport ">Transit</a></li>
+			    	<li><a href="#" class="parks ">Parks</a></li>
+			    	<li><a href="#" class="library ">Libraries</a></li>
+			    	<li><a href="#" class="interest ">Interest Points</a></li>
+			    	<li><a href="#" class="public_service ">Public Service</a></li>
 			</ul>
 			<ul class="contribute">
 				<li><a href="#">Donate Money</a></li>
@@ -200,11 +208,11 @@ if ( isset( $user ) ) {
 						<label for="for_disaster">For: </label>
 						<select name="for_disaster" id="for_disaster" class="for_disaster" required="required">
 <?php
-foreach ( $disasters as $disaster ) {
+//foreach ( $disasters as $disaster ) {
 ?>
-							<option value="<?php echo $disaster->id; ?>"><?php echo $disaster->name; ?></option>
+							<option value="<?php //echo $disaster->id; ?>"><?php //echo $disaster->name; ?></option>
 <?php
-}
+//}
 ?>
 						</select>						    
 					</div>
