@@ -1826,3 +1826,136 @@
 --
 #0 /Users/clay/Sites/Hackathon/index.php(104): Kohana_Request->execute()
 #1 {main}
+2012-07-29 12:11:59 --- ERROR: Exception [ 0 ]: parse error: failed at `background-color: #d9d9d9 \9;` public/cache/2d01500145e59cda30e2885cee4823a4-1343585442.css on line 829 ~ MODPATH\annex\submodules\less\lib\lessc.inc.php [ 1730 ]
+2012-07-29 12:11:59 --- STRACE: Exception [ 0 ]: parse error: failed at `background-color: #d9d9d9 \9;` public/cache/2d01500145e59cda30e2885cee4823a4-1343585442.css on line 829 ~ MODPATH\annex\submodules\less\lib\lessc.inc.php [ 1730 ]
+--
+#0 C:\xampp\htdocs\endpoint\modules\annex\submodules\less\lib\lessc.inc.php(1683): lessc->throwParseError()
+#1 C:\xampp\htdocs\endpoint\modules\annex\submodules\less\lib\lessc.inc.php(1713): lessc->parseTree(NULL)
+#2 C:\xampp\htdocs\endpoint\modules\annex\submodules\less\classes\less\core.php(187): lessc->parse()
+#3 C:\xampp\htdocs\endpoint\modules\annex\submodules\less\classes\less\core.php(173): Less_Core::_compile('public/cache/2d...')
+#4 C:\xampp\htdocs\endpoint\modules\annex\submodules\less\classes\less\core.php(143): Less_Core::_generate_assets('public/cache/2d...', Array)
+#5 C:\xampp\htdocs\endpoint\modules\annex\submodules\less\classes\less\core.php(59): Less_Core::_combine(Array)
+#6 C:\xampp\htdocs\endpoint\application\themes\default\views\wrapper.php(18): Less_Core::compile(Array)
+#7 C:\xampp\htdocs\endpoint\system\classes\kohana\view.php(61): include('C:\xampp\htdocs...')
+#8 C:\xampp\htdocs\endpoint\system\classes\kohana\view.php(343): Kohana_View::capture('C:\xampp\htdocs...', Array)
+#9 C:\xampp\htdocs\endpoint\system\classes\kohana\controller\template.php(44): Kohana_View->render()
+#10 C:\xampp\htdocs\endpoint\modules\annex\classes\controller\public.php(44): Kohana_Controller_Template->after()
+#11 [internal function]: Controller_Public->after()
+#12 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client\internal.php(121): ReflectionMethod->invoke(Object(Controller_Public_Site))
+#13 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#14 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#15 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#16 {main}
+2012-07-29 12:12:13 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+2012-07-29 12:12:13 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+2012-07-29 12:12:13 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/user_icon.png ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+--
+#0 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:12:13 --- ERROR: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+2012-07-29 12:12:13 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/drop.png ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+--
+#0 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:12:13 --- STRACE: HTTP_Exception_404 [ 404 ]: Unable to find a route to match the URI: public/img/world.png ~ SYSPATH\classes\kohana\request.php [ 1126 ]
+--
+#0 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#1 {main}
+2012-07-29 12:14:28 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:14:28 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:15:32 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:15:32 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:15:33 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:15:33 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:15:38 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:15:38 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:18:15 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:18:15 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:18:16 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:18:16 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:18:20 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:18:20 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:18:26 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:18:26 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:18:28 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:18:28 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:18:29 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:18:29 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:18:29 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:18:29 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:19:19 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:19:19 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:19:23 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:19:23 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}
+2012-07-29 12:19:54 --- ERROR: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+2012-07-29 12:19:54 --- STRACE: HTTP_Exception_404 [ 404 ]: The requested URL [object Object] was not found on this server. ~ SYSPATH\classes\kohana\request\client\internal.php [ 87 ]
+--
+#0 C:\xampp\htdocs\endpoint\system\classes\kohana\request\client.php(64): Kohana_Request_Client_Internal->execute_request(Object(Request))
+#1 C:\xampp\htdocs\endpoint\system\classes\kohana\request.php(1138): Kohana_Request_Client->execute(Object(Request))
+#2 C:\xampp\htdocs\endpoint\index.php(104): Kohana_Request->execute()
+#3 {main}

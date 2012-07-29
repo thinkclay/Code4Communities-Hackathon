@@ -1,5 +1,8 @@
 var placeTypes = ['atm','restaurant','bank'];
 
+//Global Var on Location Object for get_lat_lon
+var location = {};
+
 $(function(){
 	points = { count: 0, raw: [], clean: [] };
 	$map = $('#map');
@@ -381,6 +384,102 @@ function get_attractions(on) {
 	}
 }
 
+function get_demographics (on) 
+{
+  
+	     if ( on === false )
+		{
+			$map.gmap3({ action: 'clear', tag: 'demographic' });
+			return;
+		}
+  
+	    geoRequest = $.ajax({
+	      type  : 'GET',
+	      data  : { 
+	        token: '287475de3e36adb61c1a3efc124e906ab0abae153a0daa157fa538cdb1cd90ca',
+	        limit: 500
+	      },
+	      url   :'/api/stats/census/demographics',
+	      success : function (result) {
+
+	        if ( result.length >= 1 ) 
+	        {
+	          data = [];
+	          city = 'Denver';
+	          state = 'CO';
+
+
+
+	          for ( i=0; i<result.length; i++ ) 
+	          {
+	            data[i] = {};
+	            data[i].data = result[i];
+	            data[i].address = result[i].address;
+	            get_lat_lon(data[i].address + city +',' + state);
+	            data[i].lat = location.latitude;
+	            data[i].lng = location.longitude;
+	          }
+	          
+	          $map.gmap3({ 
+	            action  : 'addMarkers',
+	            tag     : 'demographic',
+	            radius  : 20,
+	            markers : data,
+	            clusters: {
+	              0: {
+	                content: '<div class="cluster cluster-small">CLUSTER_COUNT</div>',
+	                width: 35,
+	                height: 39
+	              }
+	            },
+	            marker  : {
+	              options : { icon: '/media/img/demographic.png', zIndex: 555 },
+	              events  : {  
+	                        mouseover: function(marker, event, data){
+	                          $(this).gmap3(
+	                            { action:'clear', name:'overlay'},
+	                            { action:'addOverlay',
+	                              latLng: marker.getPosition(),
+	                              content:  '<div class="infobullet">' +
+	                                          '<div class="title">'+data.population_2010+'</div>',
+	                              offset: {
+	                                x:-46,
+	                                y:-98
+	                              }
+	                            }
+	                          );
+	                        },
+	                        mouseout: function(){
+	                          $(this).gmap3({action:'clear', name:'overlay'});
+	                },
+	                click: function(marker, event, data){
+	                  window.location = '/browse/detail/'+data.listing_num;
+	                }
+	              }
+	            }
+	          }); 
+	        }
+	      },
+	      error : function (data) {
+	        if (typeof console == 'object')
+	          console.log('ajax error');
+	      }
+	    });
+}
+
+
+
+function get_lat_lon(address){
+  geocoder.geocode( { 'address': address}, function(results, status) {
+
+  if (status == google.maps.GeocoderStatus.OK) {
+      location.latitude = results[0].geometry.location.lat();
+      location.longitude = results[0].geometry.location.lng();
+      alert(latitude);
+      } 
+  }); 
+}
+
 
 
 $(function () {	
@@ -533,6 +632,11 @@ $(function(){
 				$this.removeClass('on');
 				get_bus_routes(false);
 			}
+		}
+
+		if ($(this).hasClass('demographic') )
+		{
+		     get_demographics();
 		}
 		
 		return false;
